@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3806fda8b6acdcc4dbe5f927b1338b78, type: 3}
+  m_Name: Entity_FireWork_3
+  m_EditorClassIdentifier: Assembly-CSharp::Creatures.CreaturesData
+  _creatureType: 1
+  _instanceObject: {fileID: 7433666851269635290, guid: 6b0696672feb0ac4e8abbd3432878780, type: 3}
+  _creatureName: Firework
+  _creatureStats:
+    MoveSpeed: 0
+    AttackPower: 0
+  _creatureUI:
+    CreatureIcon: {fileID: -1698358432, guid: d08296f1f89f03c4592d5619c7829572, type: 3}
+    CreaturePrice: 
+    CreatureName: Firework

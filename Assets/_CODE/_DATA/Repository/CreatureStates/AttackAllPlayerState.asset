@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99bc73806756b0e4ba350e28734e91ea, type: 3}
+  m_Name: AttackAllPlayerState
+  m_EditorClassIdentifier: Assembly-CSharp::Creatures.Navigation.States.AttackPlayerCommandState
+  StateView: {fileID: 0}
+  _allEnemyAttack: 1
+  _attackPlayerState: {fileID: 11400000, guid: 791e64e62fb935144b746285fe671174, type: 2}

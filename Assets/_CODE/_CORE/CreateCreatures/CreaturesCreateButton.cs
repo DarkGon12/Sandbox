@@ -16,6 +16,7 @@ namespace Creatures.UI
         [Inject] private IPublisher<SelectedWeaponEvent> _selectedWeaponEventPub;
 
         [Inject] private IPublisher<LoadSceneEvent> _loadSceneEventPub;
+        [Inject] private IPublisher<ShowInterstitialAdEvent> _showInterAdEventPub;
 
         private int _weaponIndex;
         private string _sceneName;
@@ -58,11 +59,13 @@ namespace Creatures.UI
         private void CreateCreature()
         {
             _createCreatureEventPub.Publish(new() { CreaturesData = _creatureData });
+            _showInterAdEventPub.Publish(new() { });
         }
 
         private void SelectWeapon()
         {
             _selectedWeaponEventPub.Publish(new() { WeaponIndex = _weaponIndex });
+            _showInterAdEventPub.Publish(new() { });
         }
 
         private void SelectMap()

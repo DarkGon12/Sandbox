@@ -27,6 +27,8 @@ namespace Cretures
             PlaySpawnEffect();
         }
 
+        public void SetEndScale(float scale) => _endScale = scale;
+
         public void PlaySpawnEffect()
         {
             transform.localScale = Vector3.one * _startScale;

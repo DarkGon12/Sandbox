@@ -22,6 +22,9 @@ namespace Creatures.Navigation
         private bool _isDead;
         private CreaturesData _creatureData;
 
+        public int SetDamage(int damage) => _damagePower = damage;
+        public int SetHealth(int health) => _health = health;
+
         public int Level => _level;
         public CreatureTeam Team => _creatureTeam;
 

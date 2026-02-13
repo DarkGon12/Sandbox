@@ -2396,9 +2396,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8238660477946921216}
+  - component: {fileID: 7790549108442166460}
   m_Layer: 0
   m_Name: 'Avocadogorilla[Ragdoll]'
-  m_TagString: Creature
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2420,6 +2421,19 @@ Transform:
   - {fileID: 7607469054033717956}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7790549108442166460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8372394501985601089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e49119f16f78c049996b8f5de3c0832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CreaturesRagdollLifeTime
+  _lifeTime: 15
 --- !u!1 &8425631681621998682
 GameObject:
   m_ObjectHideFlags: 0

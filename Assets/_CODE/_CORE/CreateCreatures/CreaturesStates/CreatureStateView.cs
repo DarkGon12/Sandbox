@@ -40,7 +40,7 @@ namespace Creatures.Navigation
         public NavMeshAgent GetAgent => _agent;
 
 
-        private void Start()
+        private void Awake()
         {
             _playerTarget = GameObject.FindGameObjectWithTag("Player");
 

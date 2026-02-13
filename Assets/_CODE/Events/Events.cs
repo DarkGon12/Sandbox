@@ -35,3 +35,8 @@ public class LoadSceneEvent
 {
     public string SceneName;
 }
+
+public class ShowInterstitialAdEvent
+{
+
+}

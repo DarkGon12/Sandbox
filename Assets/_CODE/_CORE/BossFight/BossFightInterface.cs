@@ -36,16 +36,25 @@ public class BossFightInterface : MonoBehaviour
     {
         while (_currentTime >= 0)
         {
-            yield return new WaitForSeconds(1);
-            _currentTime -= 1;
-            _countToSpawn.text = _currentTime.ToString("0 Sec");
+            UpdateTimerText(_currentTime);
 
             if (_currentTime == 0)
             {
-                _countToSpawn.text = "0 Sec";
                 SpawnBoss();
+                yield break;
             }
+
+            yield return new WaitForSeconds(1);
+            _currentTime--;
         }
+    }
+
+    private void UpdateTimerText(int timeInSeconds)
+    {
+        int minutes = timeInSeconds / 60;
+        int seconds = timeInSeconds % 60;
+
+        _countToSpawn.text = $"{minutes:00}:{seconds:00} Sec";
     }
 
     private void SpawnBoss()
@@ -59,5 +68,8 @@ public class BossFightInterface : MonoBehaviour
         boss.GetComponent<CreatureInformation>().SetHealth(350);
         boss.GetComponent<CreatureInformation>().SetDamage(30);
         boss.GetComponent<CreatureStateView>().SetState(_attackPlayerState);
+
+        _currentTime = _countFromSpawn;
+        StartTimer();
     }
 }

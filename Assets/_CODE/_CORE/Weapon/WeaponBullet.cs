@@ -1,13 +1,23 @@
-using UnityEngine;
+using Creatures;
+using Creatures.Navigation;
 using Services.ObjectPool;
 using System.Collections;
-using Creatures.Navigation;
+using UnityEngine;
 
 namespace Sandbox.Weapon
 {
     [RequireComponent(typeof(Rigidbody))]
     public class WeaponBullet : MonoBehaviour
     {
+        [Header("Blood FX Pool")]
+        [SerializeField] private string _bloodFxPoolTag = "BloodFx";
+        [SerializeField] private GameObject _bloodFxPrefab;
+        [SerializeField] private int _bloodFxPoolSize = 20;
+
+        [SerializeField] private CreatureState _attackPlayerState;
+
+        private static bool _bloodPoolCreated;
+
         private Rigidbody _rb;
         private string _poolTag;
         private float _lifeTime;
@@ -42,8 +52,22 @@ namespace Sandbox.Weapon
 
         private void OnCollisionEnter(Collision collision)
         {
-            if (collision.transform.root.tag == "Creature")
-                collision.transform.root.GetComponent<CreatureInformation>().TakeDamage(_damage);
+            if (collision.transform.root.CompareTag("Creature"))
+            {
+                collision.transform.root
+                    .GetComponent<CreatureInformation>()
+                    .TakeDamage(_damage);
+
+                collision.transform.root
+                    .GetComponent<CreatureEffect>()
+                    ?.PlayHitEffect(
+                        collision.contacts[0].point,
+                        collision.contacts[0].normal
+                    );
+                collision.transform.root
+                    .GetComponent<CreatureStateView>()
+                    .SetState(_attackPlayerState);
+            }
 
             ReturnToPool();
         }

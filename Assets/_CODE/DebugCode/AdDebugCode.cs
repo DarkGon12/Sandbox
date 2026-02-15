@@ -1,19 +1,14 @@
-using GoogleMobileAds.Sample;
 using UnityEngine;
 using Zenject;
 
 public class AdDebugCode : MonoBehaviour
 {
-    [Inject] private InterstitialAdController _adInterController;
+    /*
+    [Inject] private AppOpenAdController _adAppOpen;
 
     private void Start()
     {
-        _adInterController.LoadAd();
+        _adAppOpen.LoadAd();
     }
-
-    [ContextMenu("DebugLoadAd")]
-    private void LoadAd()
-    {
-        _adInterController.LoadAd();
-    }
+    */
 }

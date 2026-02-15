@@ -1,6 +1,4 @@
-using GoogleMobileAds.Sample;
 using MessagePipe;
-using UnityEngine;
 using Zenject;
 
 namespace Installers
@@ -21,9 +19,7 @@ namespace Installers
         private void BindSceneInstaller()
         {
             Container.Bind<SceneInfo>().FromComponentInHierarchy().AsSingle().NonLazy();
-            Container.Bind<InterstitialAdController>().FromComponentInHierarchy().AsSingle().NonLazy();
             Container.Bind<AppOpenAdController>().FromComponentInHierarchy().AsSingle().NonLazy();
-            Container.Bind<AdsBanner>().FromComponentInHierarchy().AsSingle().NonLazy();
         }
 
         private void BindMessages()
@@ -36,7 +32,10 @@ namespace Installers
             Container.BindMessageBroker<CreatureCommandEvent>(options);
             Container.BindMessageBroker<CreatureTransformCommandEvent>(options);
 
-            Container.BindMessageBroker<SelectedWeaponEvent>(options); 
+            Container.BindMessageBroker<SelectedWeaponEvent>(options);
+            Container.BindMessageBroker<CreatureWindowView>(options);
+            Container.BindMessageBroker<CreatureVisibleEffect>(options);
+            Container.BindMessageBroker<ChangePlayerTagEvent>(options);
         }
     }
 }

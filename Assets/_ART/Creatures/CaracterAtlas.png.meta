@@ -127,11 +127,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 202
+        y: 779
         width: 144
         height: 245
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -148,12 +148,12 @@ TextureImporter:
       name: CaracterAtlas_1
       rect:
         serializedVersion: 2
-        x: 151
-        y: 201
-        width: 294
-        height: 246
+        x: 152
+        y: 779
+        width: 295
+        height: 245
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -162,6 +162,336 @@ TextureImporter:
       bones: []
       spriteID: 74f45725628d7d54ca419a3e6440dde1
       internalID: -1522693769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaracterAtlas_2
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 779
+        width: 254
+        height: 245
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66eab1e267a57b1419dbd2e4fd7e4e09
+      internalID: -2011555958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaracterAtlas_3
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 778
+        width: 195
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 736e42037cc12ff4194c7b4b84083d03
+      internalID: 724919009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaracterAtlas_7
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 582
+        width: 162
+        height: 173
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e987a34df3daab44f8df3b7889e08554
+      internalID: 1405592954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaracterAtlas_9
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 576
+        width: 154
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83129910c1c5b65408a358a13726b7a8
+      internalID: -600184425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaracterAtlas_11
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 577
+        width: 262
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ace8d8157277b428e1bdbd8896dc15
+      internalID: -1276122983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaracterAtlas_12
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 575
+        width: 114
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b05ab971048172c418d91fe1ae2d9474
+      internalID: 1381073648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaracterAtlas_13
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 578
+        width: 127
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d2abac54c4784741b207f19c30ec6eb
+      internalID: -1962853994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaracterAtlas_14
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 361
+        width: 102
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 775c8f069859f71479c93c7d60a8f230
+      internalID: 1398844335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaracterAtlas_15
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 361
+        width: 138
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ad88bca50216ae4aaea75bc200c3929
+      internalID: 147584478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaracterAtlas_16
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 360
+        width: 132
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0123517ef9ea434884703f815465713
+      internalID: 155547633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaracterAtlas_17
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 360
+        width: 132
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6619d79e09d5b1a4499eb556d586ee1a
+      internalID: -1585656105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaracterAtlas_18
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 360
+        width: 134
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b55a0ce0e21bb749af5b8bcc3ff3ac9
+      internalID: 2019781490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaracterAtlas_19
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 361
+        width: 117
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f53e56fdfd9e59c4fa320749fa031eac
+      internalID: 400079928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaracterAtlas_20
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 361
+        width: 146
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c038c6c4feec6d241827bd5db997d3b2
+      internalID: 413153093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaracterAtlas_21
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 132
+        width: 77
+        height: 208
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf95e0c887deff2439c47e2e31a8f80b
+      internalID: -1664705832
       vertices: []
       indices: 
       edges: []
@@ -178,10 +508,32 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       CaracterAtlas_0: 1883352810
       CaracterAtlas_1: -1522693769
+      CaracterAtlas_10: -578689005
+      CaracterAtlas_11: -1276122983
+      CaracterAtlas_12: 1381073648
+      CaracterAtlas_13: -1962853994
+      CaracterAtlas_14: 1398844335
+      CaracterAtlas_15: 147584478
+      CaracterAtlas_16: 155547633
+      CaracterAtlas_17: -1585656105
+      CaracterAtlas_18: 2019781490
+      CaracterAtlas_19: 400079928
+      CaracterAtlas_2: -2011555958
+      CaracterAtlas_20: 413153093
+      CaracterAtlas_21: -1664705832
+      CaracterAtlas_3: 724919009
+      CaracterAtlas_4: -246999862
+      CaracterAtlas_5: 1314351324
+      CaracterAtlas_6: -1390544751
+      CaracterAtlas_7: 1405592954
+      CaracterAtlas_8: -826068426
+      CaracterAtlas_9: -600184425
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

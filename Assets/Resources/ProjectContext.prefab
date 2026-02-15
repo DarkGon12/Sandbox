@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Sandbox.SceneLoader
   progressBar: {fileID: 0}
-  gameSceneName: SampleScene
+  gameSceneName: Voxel_map
 --- !u!1 &3201527087044236885
 GameObject:
   m_ObjectHideFlags: 0
@@ -55,9 +55,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 939016458544907021}
-  - component: {fileID: 3295869256834830076}
   - component: {fileID: 4211927248578474284}
-  - component: {fileID: 6268112406038692423}
   m_Layer: 0
   m_Name: AdMobileController
   m_TagString: Untagged
@@ -80,19 +78,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6287594150818727541}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3295869256834830076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3201527087044236885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 086c515a22ec47644a04274d4f840f65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AdsBanner
-  _adUnit_Id: ca-app-pub-9039391751547678/2983162927
 --- !u!114 &4211927248578474284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,18 +90,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee5069b1020036448116aa7eef6a32e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GoogleMobileAds.Sample.AppOpenAdController
---- !u!114 &6268112406038692423
+--- !u!1 &7157254257999457371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1902634253942084724}
+  - component: {fileID: 399412797619320482}
+  m_Layer: 0
+  m_Name: FirebaseAnalytic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1902634253942084724
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7157254257999457371}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.22489, y: 0, z: 4.72887}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6287594150818727541}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &399412797619320482
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3201527087044236885}
+  m_GameObject: {fileID: 7157254257999457371}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90a264dc01d95624aad38249ab28a083, type: 3}
+  m_Script: {fileID: 11500000, guid: a4da7b727472b9b4fb5f5dbecf0b3f0b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GoogleMobileAds.Sample.InterstitialAdController
+  m_EditorClassIdentifier: Assembly-CSharp::FirebaseInitialize
 --- !u!1 &7406639984276448403
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,6 +168,7 @@ Transform:
   - {fileID: 6875365387830453331}
   - {fileID: 5720652596572692520}
   - {fileID: 939016458544907021}
+  - {fileID: 1902634253942084724}
   m_Father: {fileID: 5984157095515682795}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7309966373249732719
@@ -165,7 +183,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a3e0b2d1847cd94faa6b857fcc4423f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interAd: {fileID: 0}
 --- !u!1 &8654880028922740820
 GameObject:
   m_ObjectHideFlags: 0

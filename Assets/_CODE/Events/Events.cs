@@ -40,3 +40,18 @@ public class ShowInterstitialAdEvent
 {
 
 }
+
+public class CreatureWindowView
+{
+    public bool IsShow;
+}
+
+public class CreatureVisibleEffect
+{
+    public bool IsShow;
+}
+
+public class ChangePlayerTagEvent
+{
+    public GameObject PlayerTarget;
+}

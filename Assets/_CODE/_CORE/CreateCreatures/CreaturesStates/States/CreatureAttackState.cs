@@ -38,7 +38,7 @@ namespace Creatures.Navigation.States
                     return;
                 }
 
-                StateView.GetSensor.ForceRecheck();
+               // StateView.GetSensor.ForceRecheck();
                 IsFinished = true;
                 return;
             }

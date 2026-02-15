@@ -17,6 +17,7 @@ namespace Creatures.Navigation
         [SerializeField] private GameObject _ragdollDead;
         [SerializeField] private List<Collider> _colliders = new List<Collider>();
 
+        [Inject] private ISubscriber<ChangePlayerTagEvent> _changePlayerTagEventSub;
         [Inject] private ISubscriber<CreatureDeadEvent> _creatureDeadEventSub;
         [Inject] private ISubscriber<CreatureCommandEvent> _commadEventSub;
         [Inject] private DiContainer _container;
@@ -47,6 +48,7 @@ namespace Creatures.Navigation
             _boxCollider = GetComponent<BoxCollider>();
 
             var bag = DisposableBag.CreateBuilder();
+            _changePlayerTagEventSub.Subscribe(UpdateTagEvent).AddTo(bag);
             _creatureDeadEventSub.Subscribe(CreatureDeadEvent).AddTo(bag);
             _commadEventSub.Subscribe(InitCommand).AddTo(bag);
             bag.Add(_disposable);
@@ -59,6 +61,11 @@ namespace Creatures.Navigation
             _anim = GetComponent<Animator>();
 
             SetState(_startState);
+        }
+
+        public void UpdateTagEvent(ChangePlayerTagEvent evt)
+        {
+            _playerTarget = evt.PlayerTarget;
         }
 
         public void EnableColliders(bool state)

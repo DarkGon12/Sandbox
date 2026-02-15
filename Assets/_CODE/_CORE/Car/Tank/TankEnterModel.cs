@@ -9,7 +9,7 @@ namespace Sandbox.Tank
 
         [SerializeField] private GameObject _tankControllUI;
         [SerializeField] private GameObject[] _playerControllUI;
-        [SerializeField] private FixedJoystick _rotateJoy;
+        [SerializeField] private FloatingJoystick _rotateJoy;
         [SerializeField] private FixedJoystick _turretJoy;
 
         [SerializeField] private CarControlButton _gasButton;
@@ -19,12 +19,14 @@ namespace Sandbox.Tank
         [SerializeField] private Button _enterButton;
         [SerializeField] private Button _exitButton;
 
+        private Rigidbody _rb;
         private TankController _selectedTank;
         private Camera _cam;
 
         private void Start()
         {
             _cam = Camera.main;
+            _rb = GetComponent<Rigidbody>();
 
             _enterButton.onClick.AddListener(EnterTankButton);
             _exitButton.onClick.AddListener(ExitTankButton);
@@ -75,6 +77,15 @@ namespace Sandbox.Tank
 
                 _enterButton.gameObject.SetActive(true);
                 _exitButton.gameObject.SetActive(false);
+
+                if (_rb != null)
+                {
+                    _rb.linearVelocity = Vector3.zero;
+                    _rb.angularVelocity = Vector3.zero;
+                    _rb.rotation = Quaternion.identity;
+                }
+
+                transform.rotation = Quaternion.identity;
             }
         }
     }

@@ -1,6 +1,9 @@
 using UnityEngine.UI;
 using DG.Tweening;
 using UnityEngine;
+using System;
+using Zenject;
+using MessagePipe;
 
 namespace Creatures.UI
 {
@@ -9,21 +12,32 @@ namespace Creatures.UI
         [Header("UI")]
         [SerializeField] private RectTransform _spawnButton;
         [SerializeField] private RectTransform _spawnPanel;
+        [SerializeField] private CreaturePanelTutorial _arrowTutorial;
 
         [Header("Animation")]
         [SerializeField] private float _duration = 0.4f;
         [SerializeField] private Ease _ease = Ease.OutBack;
 
+        private bool _firstTap = true;
         private Vector2 _panelTargetPos;
         private Vector3 _panelTargetScale;
 
         [SerializeField] private Button _creaturesShowWindowBtn;
         [SerializeField] private Button _creaturesHideWindowBtn;
 
+        [Inject] private ISubscriber<CreatureWindowView> _showWindowEventSub;
+
+        private IDisposable _disposable;
+
         private void Awake()
         {
             _creaturesShowWindowBtn.onClick.AddListener(OpenPanel);
             _creaturesHideWindowBtn.onClick.AddListener(ClosePanel);
+
+            var bag = DisposableBag.CreateBuilder();
+            _showWindowEventSub.Subscribe(ShowWindowEvent).AddTo(bag);
+            bag.Add(_disposable);
+            _disposable = bag.Build();
 
             _panelTargetPos = _spawnPanel.anchoredPosition;
             _panelTargetScale = _spawnPanel.localScale;
@@ -32,8 +46,22 @@ namespace Creatures.UI
             _spawnPanel.gameObject.SetActive(false);
         }
 
+        public void ShowWindowEvent(CreatureWindowView evt)
+        {
+            if (evt.IsShow)
+                OpenPanel();
+            else
+                ClosePanel();
+        }
+
         public void OpenPanel()
         {
+            if (_firstTap)
+            {
+                _firstTap = false;
+                _arrowTutorial.NextStep();
+            }
+
             _spawnPanel.gameObject.SetActive(true);
 
             _spawnPanel.anchoredPosition = _spawnButton.anchoredPosition;
@@ -57,5 +85,7 @@ namespace Creatures.UI
                 _spawnPanel.gameObject.SetActive(false);
             });
         }
+
+        private void OnDestroy() => _disposable?.Dispose();
     }
 }

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3806fda8b6acdcc4dbe5f927b1338b78, type: 3}
+  m_Name: FatCapybara
+  m_EditorClassIdentifier: Assembly-CSharp::Creatures.CreaturesData
+  _creatureType: 0
+  _instanceObject: {fileID: 3676036523803212109, guid: 9b733e36937a9714bb5d70e00351bc14, type: 3}
+  _weaponIndex: 0
+  _creatureName: FatCapybara
+  _mapIndex: 
+  _creatureStats:
+    MoveSpeed: 1
+    AttackPower: 10
+  _creatureUI:
+    CreatureIcon: {fileID: 147584478, guid: 3aae7646b7c582743bb35c08635f1921, type: 3}
+    CreaturePrice: 
+    CreatureName: FatCapybara

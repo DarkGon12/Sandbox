@@ -10,7 +10,7 @@ namespace Sandbox.Weapon
     public class WeaponStandart : MonoBehaviour
     {
         [SerializeField] private Transform _firePoint;
-        [SerializeField] private Button _fireButton;
+        [SerializeField] private CarControlButton _fireButton;
         [SerializeField] private WeaponData _weaponData;
         [SerializeField] private ParticleSystem _muzzleParticle;
         [SerializeField] private AudioClip _shootClip;
@@ -27,6 +27,8 @@ namespace Sandbox.Weapon
         private EventTrigger _eventTrigger;
         private EventTrigger.Entry _downEntry;
         private EventTrigger.Entry _upEntry;
+
+        private Coroutine _reloadCoroutine;
 
         private void Start()
         {
@@ -49,6 +51,14 @@ namespace Sandbox.Weapon
         private void OnDisable()
         {
             RemoveButtonListeners();
+
+            if (_reloadCoroutine != null)
+            {
+                StopCoroutine(_reloadCoroutine);
+                _reloadCoroutine = null;
+            }
+
+            _isReloading = false;
         }
 
         private void Update()
@@ -61,7 +71,9 @@ namespace Sandbox.Weapon
 
             if (_currentAmmo <= 0)
             {
-                StartCoroutine(Reload());
+                if (_reloadCoroutine == null)
+                    _reloadCoroutine = StartCoroutine(Reload());
+
                 return;
             }
 
@@ -173,12 +185,11 @@ namespace Sandbox.Weapon
         {
             _isReloading = true;
 
-            // Тут можно вызвать анимацию перезарядки
-
             yield return new WaitForSeconds(_weaponData.ReloadTime);
 
             _currentAmmo = _weaponData.MagazineSize;
             _isReloading = false;
+            _reloadCoroutine = null;
         }
     }
 }

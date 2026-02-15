@@ -7,7 +7,7 @@ public class GravityGun : MonoBehaviour
     [Header("Links")]
     [SerializeField] private Transform _firePoint;
     [SerializeField] private LineRenderer _lineRenderer;
-    [SerializeField] private Button _startFire;
+    [SerializeField] private CarControlButton _startFire;
     [SerializeField] private GameObject _buttonPanels;
 
     [Header("Rotate Buttons")]
@@ -62,13 +62,13 @@ public class GravityGun : MonoBehaviour
 
     private void OnEnable()
     {
-        _startFire.onClick.AddListener(ToggleFire);
+        _startFire.OnDown += ToggleFire;
     }
 
     private void OnDisable()
     {
         _isFire = false;
-        _startFire.onClick.RemoveListener(ToggleFire);
+        _startFire.OnDown -= ToggleFire;
     }
 
     private void Update()

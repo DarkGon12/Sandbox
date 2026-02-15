@@ -1,34 +1,72 @@
-using UnityEngine.EventSystems;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Sandbox.Player
 {
-    public class TouchLookArea : MonoBehaviour, IPointerDownHandler, IDragHandler
+    public class TouchLookArea : MonoBehaviour
     {
         [SerializeField] private float sensitivity = 0.15f;
         [SerializeField] private Transform player;
         [SerializeField] private Transform cam;
-        [SerializeField] private WeaponHolderMotion _weaponMotion;
+        [SerializeField] private WeaponHolderMotion weaponMotion;
+        [SerializeField] private CarControlButton fireButton;
 
         private float xRotation;
-        private Vector2 lastPos;
         private Rigidbody rb;
+
+        private int lookFingerId = -1;
+        private Vector2 lastPos;
 
         void Awake()
         {
             rb = player.GetComponent<Rigidbody>();
         }
 
-        public void OnPointerDown(PointerEventData eventData)
+        void Update()
         {
-            lastPos = eventData.position;
+            foreach (var touch in Input.touches)
+            {
+                if (fireButton.Pressed && touch.fingerId == fireButton.PointerId)
+                {
+                    ProcessTouch(touch);
+                    continue;
+                }
+
+                if (touch.position.x < Screen.width * 0.5f)
+                    continue;
+
+                ProcessTouch(touch); 
+            }
         }
 
-        public void OnDrag(PointerEventData eventData)
-        {
-            Vector2 delta = eventData.position - lastPos;
-            lastPos = eventData.position;
 
+        private void ProcessTouch(Touch touch)
+        {
+            if (touch.phase == TouchPhase.Began)
+            {
+                lookFingerId = touch.fingerId;
+                lastPos = touch.position;
+            }
+
+            if (touch.fingerId != lookFingerId)
+                return;
+
+            if (touch.phase == TouchPhase.Moved)
+            {
+                Vector2 delta = touch.position - lastPos;
+                lastPos = touch.position;
+                ApplyLook(delta);
+            }
+
+            if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
+            {
+                if (lookFingerId == touch.fingerId)
+                    lookFingerId = -1;
+            }
+        }
+
+        private void ApplyLook(Vector2 delta)
+        {
             float yaw = delta.x * sensitivity;
             float pitch = delta.y * sensitivity;
 
@@ -39,7 +77,7 @@ namespace Sandbox.Player
             Quaternion deltaRotation = Quaternion.Euler(0f, yaw, 0f);
             rb.MoveRotation(rb.rotation * deltaRotation);
 
-            _weaponMotion.ApplyLookSway(delta);
+            weaponMotion.ApplyLookSway(delta);
         }
     }
 }

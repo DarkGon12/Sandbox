@@ -1,4 +1,4 @@
-using GoogleMobileAds.Sample;
+
 using MessagePipe;
 using System;
 using System.Collections;
@@ -16,28 +16,42 @@ public class SceneAdsController : MonoBehaviour
     [SerializeField] private int _interstitialCoolDown = 90;
     [SerializeField] private bool _readyInterstitial = true;
 
-    [Inject] private AppOpenAdController _appOpen;
-    [Inject] private InterstitialAdController _interstitial;
-    [Inject] private AdsBanner _banner;
-
     [Inject] private ISubscriber<ShowInterstitialAdEvent> _showInterAdEventSub;
+    [Inject] private AppOpenAdController _appOpen;
 
+    private InterstitialAdController _interstitial;
+    private AdsBanner _banner;
+
+    private bool _canShowInter = true;
     private int _interstitialEnergy;
     private IDisposable _disposible;
 
-    private void Start()
+    public AdsBanner GetBanner => _banner;
+
+    public void CanVisibleInter(bool state) => _canShowInter = state; 
+
+    private IEnumerator Start()
     {
+        yield return new WaitUntil(() => GoogleMobileAdsController.IsInitialized);
+
+        _appOpen.LoadAd();
+
         _interstitialEnergy = _interstitialMaxEnergy;
         var bag = DisposableBag.CreateBuilder();
         _showInterAdEventSub.Subscribe(OnShowInterAdEvent).AddTo(bag);
         bag.Add(_disposible);
         _disposible = bag.Build();
 
-        _banner.CreateBannerView();
+        _banner = new AdsBanner();
+        _banner.CreateAndShow();
+
+        _interstitial = new InterstitialAdController();
+        _interstitial.Load();
     }
 
     private void OnShowInterAdEvent(ShowInterstitialAdEvent evt)
     {
+        if (!_canShowInter) return;
         if (!_readyInterstitial) return;
 
             _interstitialEnergy -= 1;
@@ -53,24 +67,24 @@ public class SceneAdsController : MonoBehaviour
         if (!_readyInterstitial) yield return null;
 
         _interstitialAdInfoPanel.SetActive(true);
-        int timeShow = 4;
+        int timeShow = 2;
 
         while (timeShow > 0)
         {
-            _interstitialAdInfoText.text = "Out of energy Load AD: " + timeShow.ToString();
+            _interstitialAdInfoText.text = timeShow.ToString();
             yield return new WaitForSeconds(1);
             timeShow--;
         }
 
-        _interstitial.LoadAd();
+        _interstitial.Show();
         _interstitialAdInfoPanel.SetActive(false);
 
+        _readyInterstitial = false;
         yield return StartCoroutine(InterstitialAdCooldown());
     }
 
     private IEnumerator InterstitialAdCooldown()
     {
-        _readyInterstitial = false;
         yield return new WaitForSecondsRealtime(_interstitialCoolDown);
         _readyInterstitial = true;
     }

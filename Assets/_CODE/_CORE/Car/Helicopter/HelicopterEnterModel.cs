@@ -8,7 +8,7 @@ namespace Sandbox.Helicoper
     {
         [SerializeField] private GameObject _helicopterControllUI;
         [SerializeField] private GameObject[] _playerControllUI;
-        [SerializeField] private FixedJoystick _helicopterJoy;
+        [SerializeField] private FloatingJoystick _helicopterJoy;
 
         [SerializeField] private CarControlButton _liftButton;
         [SerializeField] private CarControlButton _landButton;
@@ -19,13 +19,15 @@ namespace Sandbox.Helicoper
         [Space(20)]
         [SerializeField] private Button _enterButton;
         [SerializeField] private Button _exitButton;
-        private GameObject _tankUI;
+
+        private Rigidbody _rb;
         private HelicopterMovement _selectedHellicopter;
         private Camera _cam;
 
         private void Start()
         {
             _cam = Camera.main;
+            _rb = GetComponent<Rigidbody>();
 
             _enterButton.onClick.AddListener(EnterHellicopterButton);
             _exitButton.onClick.AddListener(ExitHelicopterButton);
@@ -77,6 +79,15 @@ namespace Sandbox.Helicoper
 
                 _enterButton.gameObject.SetActive(true);
                 _exitButton.gameObject.SetActive(false);
+
+                if (_rb != null)
+                {
+                    _rb.linearVelocity = Vector3.zero;
+                    _rb.angularVelocity = Vector3.zero;
+                    _rb.rotation = Quaternion.identity;
+                }
+
+                transform.rotation = Quaternion.identity;
             }
         }
     }

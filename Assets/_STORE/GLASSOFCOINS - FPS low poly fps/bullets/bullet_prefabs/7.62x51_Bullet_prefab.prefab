@@ -133,6 +133,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 108988f58761b3e41a8321f4a642db75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Sandbox.Weapon.WeaponBullet
+  _bloodFxPoolTag: BloodFx
+  _bloodFxPrefab: {fileID: 8811039863255288494, guid: ba2178db57a57fc489b15003f0dd9595, type: 3}
+  _bloodFxPoolSize: 20
+  _attackPlayerState: {fileID: 11400000, guid: 791e64e62fb935144b746285fe671174, type: 2}
 --- !u!136 &8182935488282164764
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -215,7 +219,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.06558585
+        value: 0.102084875
         inSlope: 0
         outSlope: 0
         tangentMode: 0

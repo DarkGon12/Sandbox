@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "834058808683",
+    "project_id": "playground-craft-sandbox",
+    "storage_bucket": "playground-craft-sandbox.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:834058808683:android:d39233e12701042400b02e",
+        "android_client_info": {
+          "package_name": "sandbox.craft.playground"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBr8sMexA_AcsVSo0FGqRh6866oH0vwbvw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -11,7 +11,7 @@ public class CarController : MonoBehaviour
     private CarControlButton _handBrakeButton;
     private CarControlButton _throttleButton;
     private CarControlButton _brakeButton;
-    private FixedJoystick _moveJoystick;
+    private FloatingJoystick _moveJoystick;
 
     private SCC_RigidStabilizer _rbStabilizer;
     private SCC_Drivetrain _driveTrain;
@@ -41,7 +41,7 @@ public class CarController : MonoBehaviour
     }
 
     public void InitCar(GameObject carUI, GameObject[] controllUI, CarControlButton handBrake, 
-        CarControlButton throttle, CarControlButton brake, FixedJoystick joystic, Transform player)
+        CarControlButton throttle, CarControlButton brake, FloatingJoystick joystic, Transform player)
     {
         _carControllUI = carUI;
         _playerControllUI = controllUI;

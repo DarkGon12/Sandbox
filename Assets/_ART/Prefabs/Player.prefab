@@ -46372,7 +46372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdda20d53a4eac84e8bcf9aa96eaa2a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Sanbox.PlayerMove.PlayerMovement
-  _moveSpeed: 5
+  _moveSpeed: 8
   _inputJoy: {fileID: 0}
   _jumpForce: 6
   _groundCheckDistance: 0.25
@@ -48270,6 +48270,7 @@ MonoBehaviour:
   _motion: {fileID: 20784474774276662}
   _agrroButton: {fileID: 0}
   _agrroPlayerButton: {fileID: 0}
+  _creaturesWindow: {fileID: 0}
   _creatureCollection: []
 --- !u!1 &6837871921274699842
 GameObject:
@@ -64863,6 +64864,7 @@ MonoBehaviour:
   - {fileID: 2294757857221543004}
   - {fileID: 9000954392713719796}
   - {fileID: 6075920647549830553}
+  _lastWeaponButton: {fileID: 0}
 --- !u!1 &7974636753862123460
 GameObject:
   m_ObjectHideFlags: 0

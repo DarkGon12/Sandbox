@@ -25,7 +25,7 @@ namespace Creatures.Navigation
 
         private void OnTriggerEnter(Collider other)
         {
-            TryAggro(other);
+           // TryAggro(other);
         }
 
         public void ForceRecheck()
@@ -57,7 +57,8 @@ namespace Creatures.Navigation
 
             var hits = Physics.OverlapSphere(transform.position, 3000f);
             foreach (var hit in hits)
-                TryAggroAny(hit);
+                TryAggro(hit);
+                //TryAggroAny(hit);
         }
 
         private void TryAggroAny(Collider other)

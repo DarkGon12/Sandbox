@@ -1,30 +1,52 @@
 using GoogleMobileAds.Api;
 using UnityEngine;
 
-public class AdsBanner : MonoBehaviour
+public class AdsBanner
 {
-    [SerializeField] private string _adUnit_Id;
     private BannerView _bannerView;
 
-    public void CreateBannerView()
-    {
-        _bannerView = new BannerView(_adUnit_Id, AdSize.Leaderboard, AdPosition.Bottom);
-        LoadBannerView();
-    }
+    private const string AdUnitId =
+#if UNITY_ANDROID
+        "ca-app-pub-9039391751547678/2983162927"; // test banner
+#else
+        "unexpected_platform";
+#endif
 
-    private void LoadBannerView()
+    public void CreateAndShow()
     {
-        _bannerView.LoadAd(new AdRequest());
-    }
-
-    public void DestroyBanner()
-    {
-        if (_bannerView != null)
+        if (!GoogleMobileAdsController.IsInitialized)
         {
-            _bannerView.Destroy();
-            _bannerView = null;
+            Debug.LogWarning("[Ads][Banner] SDK not initialized");
+            return;
         }
+
+        Debug.Log("[Ads][Banner] Creating banner");
+
+        _bannerView = new BannerView(
+            AdUnitId,
+            AdSize.Banner,
+            AdPosition.Bottom
+        );
+
+        AdRequest request = new AdRequest();
+        _bannerView.LoadAd(request);
+        _bannerView.OnBannerAdLoaded += () => 
+        { 
+            _bannerView.Show(); 
+        };     
     }
 
-    private void OnDestroy() => DestroyBanner();
+    public void ShowBanner(bool state)
+    {
+        if (state)
+            _bannerView.Show();
+        else
+            _bannerView.Hide();
+    }
+
+    public void Destroy()
+    {
+        _bannerView?.Destroy();
+        _bannerView = null;
+    }
 }

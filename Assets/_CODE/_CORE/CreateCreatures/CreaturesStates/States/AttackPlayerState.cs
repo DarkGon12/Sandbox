@@ -52,7 +52,10 @@ namespace Creatures.Navigation.States
 
                 StateView.GetAnimator.SetTrigger("attack");
 
-                enemy.GetComponent<PlayerInformation>().TakeDamage(StateView.GetInfo.Damage());
+                if (enemy.GetComponent<PlayerInformation>() != null)
+                    enemy.GetComponent<PlayerInformation>().TakeDamage(StateView.GetInfo.Damage());
+                else
+                    enemy.GetComponent<CreatureInformation>().TakeDamage(StateView.GetInfo.Damage());
             }
         }
 

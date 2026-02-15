@@ -4,6 +4,7 @@ using MessagePipe;
 using Zenject;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Sandbox.Analyse;
 
 namespace Creatures.UI
 {
@@ -17,6 +18,8 @@ namespace Creatures.UI
 
         [Inject] private IPublisher<LoadSceneEvent> _loadSceneEventPub;
         [Inject] private IPublisher<ShowInterstitialAdEvent> _showInterAdEventPub;
+
+        [Inject] private IPublisher<CreatureWindowView> _showWindowEventPub;
 
         private int _weaponIndex;
         private string _sceneName;
@@ -60,17 +63,28 @@ namespace Creatures.UI
         {
             _createCreatureEventPub.Publish(new() { CreaturesData = _creatureData });
             _showInterAdEventPub.Publish(new() { });
+            _showWindowEventPub.Publish(new() { IsShow = false });
+
+            FirebaseSender.LogEventCreature("User select card", 
+                _creatureData.GetUIInfo.CreatureName, _creatureData.GetCreatureType);
         }
 
         private void SelectWeapon()
         {
             _selectedWeaponEventPub.Publish(new() { WeaponIndex = _weaponIndex });
             _showInterAdEventPub.Publish(new() { });
+            _showWindowEventPub.Publish(new() { IsShow = false });
+
+            FirebaseSender.LogEventCreature("User select weapon",
+    _creatureData.GetUIInfo.CreatureName, _creatureData.GetCreatureType);
         }
 
         private void SelectMap()
         {
             _loadSceneEventPub.Publish(new() { SceneName = _sceneName });
+
+            FirebaseSender.LogEventCreature("User select map",
+    _creatureData.GetUIInfo.CreatureName, _creatureData.GetCreatureType);
         }
     }
 }

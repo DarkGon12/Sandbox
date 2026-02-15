@@ -5075,15 +5075,15 @@ MonoBehaviour:
   _yawRightButton: {fileID: 0}
   _enginePower: 1
   _engineSmooth: 2
-  _additionalLift: 10
+  _additionalLift: 20
   _liftSmooth: 2.5
-  _maxUpSpeed: 12
-  _maxDownSpeed: -5
-  _moveForce: 1200
-  _maxHorizontalSpeed: 25
-  _tiltAngle: 20
+  _maxUpSpeed: 16
+  _maxDownSpeed: -10
+  _moveForce: 2000
+  _maxHorizontalSpeed: 45
+  _tiltAngle: 40
   _tiltSmooth: 3
-  _yawTorque: 1600
+  _yawTorque: 2000
   _yawSmooth: 3
   _mainRotorSpeed: 900
   _tailRotorSpeed: 1200

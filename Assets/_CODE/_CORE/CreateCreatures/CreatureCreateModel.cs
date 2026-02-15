@@ -7,6 +7,7 @@ using UnityEngine.UI;
 using TMPro;
 using Sandbox.Player;
 using Creatures.Navigation;
+using Creatures.UI;
 
 
 namespace Creatures
@@ -15,11 +16,13 @@ namespace Creatures
     {
         [SerializeField] private TextMeshProUGUI _creatureTextInToolGun;
         [SerializeField] private Image _creatureIconInToolGun;
-        [SerializeField] private Button _shootToolGun;
+        [SerializeField] private CarControlButton _shootToolGun;
         [SerializeField] private WeaponHolderMotion _motion;
 
         [SerializeField] private GameObject _agrroButton;
         [SerializeField] private GameObject _agrroPlayerButton;
+
+        [SerializeField] private CreaturesWindow _creaturesWindow;
 
         [SerializeField] private List<GameObject> _creatureCollection = new List<GameObject>();
 
@@ -44,12 +47,12 @@ namespace Creatures
 
         private void OnEnable()
         {
-            _shootToolGun.onClick.AddListener(ShootToolGun);
+            _shootToolGun.OnDown += ShootToolGun;
         }
 
         private void OnDisable()
         {
-            _shootToolGun.onClick.RemoveListener(ShootToolGun);
+            _shootToolGun.OnDown -= ShootToolGun;
         }
 
         private void InstantiateCreatureEvent(CreateCreatureEvent evt)
@@ -65,6 +68,12 @@ namespace Creatures
             Ray ray = _camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
             GameObject creature;
             RaycastHit hit;
+
+            if(_selectedCreature == null)
+            {
+                _creaturesWindow.OpenPanel();
+                return;
+            }
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~0, QueryTriggerInteraction.Ignore))
                 creature = _container.InstantiatePrefab(_selectedCreature.GetObject, hit.point, Quaternion.identity, null);

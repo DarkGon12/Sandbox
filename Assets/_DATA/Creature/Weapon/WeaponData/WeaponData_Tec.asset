@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77cd19eba6ae90749b6a0b2afb7cae6d, type: 3}
   m_Name: WeaponData_Tec
   m_EditorClassIdentifier: Assembly-CSharp::Sandbox.Weapon.WeaponData
-  BulletDamage: 35
+  BulletDamage: 25
   BulletPoolTag: bullet
   BulletPrefab: {fileID: 4440924034055739044, guid: 43e328bae3536a84eaca0891841b6f1d, type: 3}
   PoolSize: 20

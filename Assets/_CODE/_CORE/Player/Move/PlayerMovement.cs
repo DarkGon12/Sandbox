@@ -10,7 +10,7 @@ namespace Sandbox.PlayerMove
     {
         [Header("Move")]
         [SerializeField] private float _moveSpeed = 5f;
-        [SerializeField] private FixedJoystick _inputJoy;
+        [SerializeField] private FloatingJoystick _inputJoy;
 
         [Header("Jump")]
         [SerializeField] private float _jumpForce = 6f;

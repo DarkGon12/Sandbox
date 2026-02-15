@@ -126,9 +126,9 @@ TextureImporter:
       name: UIElements_Spawn
       rect:
         serializedVersion: 2
-        x: 7
+        x: 1
         y: 812
-        width: 199
+        width: 205
         height: 210
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -148,8 +148,8 @@ TextureImporter:
       name: UIElements_CreatureWindow
       rect:
         serializedVersion: 2
-        x: 210
-        y: 487
+        x: 209
+        y: 488
         width: 791
         height: 514
       alignment: 0
@@ -172,7 +172,7 @@ TextureImporter:
         serializedVersion: 2
         x: 15
         y: 489
-        width: 183
+        width: 186
         height: 311
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -412,10 +412,10 @@ TextureImporter:
       name: UIElements_RotateRight
       rect:
         serializedVersion: 2
-        x: 741
-        y: 258
-        width: 106
-        height: 98
+        x: 629
+        y: 259
+        width: 102
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -434,10 +434,10 @@ TextureImporter:
       name: UIElements_RotateLeft
       rect:
         serializedVersion: 2
-        x: 629
-        y: 260
+        x: 637
+        y: 130
         width: 104
-        height: 95
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -456,8 +456,8 @@ TextureImporter:
       name: UIElements_ScaleMin
       rect:
         serializedVersion: 2
-        x: 744
-        y: 369
+        x: 852
+        y: 367
         width: 105
         height: 98
       alignment: 0
@@ -478,7 +478,7 @@ TextureImporter:
       name: UIElements_ScaleSum
       rect:
         serializedVersion: 2
-        x: 854
+        x: 746
         y: 367
         width: 100
         height: 99
@@ -588,10 +588,10 @@ TextureImporter:
       name: UIElements_Weapon
       rect:
         serializedVersion: 2
-        x: 14
-        y: 135
-        width: 177
-        height: 66
+        x: 7
+        y: 131
+        width: 187
+        height: 70
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -610,10 +610,10 @@ TextureImporter:
       name: UIElements_Creature
       rect:
         serializedVersion: 2
-        x: 209
-        y: 134
-        width: 178
-        height: 66
+        x: 204
+        y: 132
+        width: 186
+        height: 71
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -632,10 +632,10 @@ TextureImporter:
       name: UIElements_Entity
       rect:
         serializedVersion: 2
-        x: 13
+        x: 7
         y: 26
-        width: 176
-        height: 96
+        width: 187
+        height: 71
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -654,10 +654,10 @@ TextureImporter:
       name: UIElements_Maps
       rect:
         serializedVersion: 2
-        x: 209
-        y: 26
-        width: 163
-        height: 72
+        x: 199
+        y: 27
+        width: 182
+        height: 69
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -676,10 +676,10 @@ TextureImporter:
       name: UIElements_Cars
       rect:
         serializedVersion: 2
-        x: 386
+        x: 385
         y: 26
-        width: 168
-        height: 71
+        width: 184
+        height: 70
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -747,7 +747,7 @@ TextureImporter:
         width: 105
         height: 105
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -756,6 +756,50 @@ TextureImporter:
       bones: []
       spriteID: 973efa67c9082274fbb5b0d3d9466c43
       internalID: -668679281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIElements_3
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 178
+        width: 50
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a94cf73d5f361d49ab5ce55a420920f
+      internalID: -1545950566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIElements_4
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 3
+        width: 142
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26d3fa5ddc3fdbb4b8b93267b37aebc8
+      internalID: 652805115
       vertices: []
       indices: 
       edges: []
@@ -787,6 +831,7 @@ TextureImporter:
       UIElements_27: 1046506483
       UIElements_28: 2020489170
       UIElements_29: 869626320
+      UIElements_3: -1545950566
       UIElements_30: -402613885
       UIElements_31: -1501807603
       UIElements_32: 2075376224
@@ -797,6 +842,7 @@ TextureImporter:
       UIElements_37: 1354118403
       UIElements_38: 1215426164
       UIElements_39: -1848556108
+      UIElements_4: 652805115
       UIElements_41: 642178863
       UIElements_42: -373432918
       UIElements_43: -1697053827

@@ -13,6 +13,7 @@ namespace Creatures.Navigation
         
         [Space(20)]
         [SerializeField] private CreatureTeam _creatureTeam;
+        [SerializeField] private MeshRenderer _teamCircle;
 
         [Inject] private IPublisher<CreatureDeadEvent> _creatureDeadEventPub;
 
@@ -21,12 +22,20 @@ namespace Creatures.Navigation
         private int _damagePower;
         private bool _isDead;
         private CreaturesData _creatureData;
+        private Camera _creatureCam;
 
+        public int Health => _health;
         public int SetDamage(int damage) => _damagePower = damage;
         public int SetHealth(int health) => _health = health;
+        public Camera GetCamera => _creatureCam;
 
         public int Level => _level;
         public CreatureTeam Team => _creatureTeam;
+
+        private void Start()
+        {
+            _creatureCam = GetComponentInChildren<Camera>(true);
+        }
 
         public int Damage()
         {
@@ -45,9 +54,16 @@ namespace Creatures.Navigation
         {
             _creatureTeam = team;
 
-            CreatureEnemySensor sensor = GetComponent<CreatureEnemySensor>();
-            if (sensor != null)
-                sensor.ForceRecheck();
+            if (team == CreatureTeam.Green)
+                _teamCircle.material.color = Color.green;
+            if (team == CreatureTeam.Red)
+                _teamCircle.material.color = Color.red;
+            if (team == CreatureTeam.White)
+                _teamCircle.material.color = Color.white;
+
+            //  CreatureEnemySensor sensor = GetComponent<CreatureEnemySensor>();
+            //  if (sensor != null)
+            //      sensor.ForceRecheck();
         }
 
         public bool IsEnemyTeam(CreatureTeam otherTeam)

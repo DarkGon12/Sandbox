@@ -2,7 +2,7 @@ using MessagePipe;
 using UnityEngine;
 using Zenject;
 using System;
-using Creatures.UI;
+using Creatures.Control;
 
 namespace Creatures.Navigation
 {
@@ -22,19 +22,18 @@ namespace Creatures.Navigation
         private int _damagePower;
         private bool _isDead;
         private CreaturesData _creatureData;
-        private Camera _creatureCam;
+        private CreaturesController _controller;
 
         public int Health => _health;
         public int SetDamage(int damage) => _damagePower = damage;
         public int SetHealth(int health) => _health = health;
-        public Camera GetCamera => _creatureCam;
 
         public int Level => _level;
         public CreatureTeam Team => _creatureTeam;
 
         private void Start()
         {
-            _creatureCam = GetComponentInChildren<Camera>(true);
+            _controller = GetComponent<CreaturesController>();
         }
 
         public int Damage()
@@ -80,6 +79,9 @@ namespace Creatures.Navigation
 
             if (_health <= 0)
             {
+                if (_controller.enabled == true)
+                    _controller.OnDeath();
+
                 _isDead = true;
 
                 if (attacker != null && attacker != this)

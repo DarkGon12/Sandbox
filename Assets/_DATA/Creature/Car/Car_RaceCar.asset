@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Car_RaceCar
   m_EditorClassIdentifier: Assembly-CSharp::Creatures.CreaturesData
   _creatureType: 3
-  _instanceObject: {fileID: 4166627389983402817, guid: 03a697263a1bdb849b76012f5e0c5a7c, type: 3}
+  _instanceObject: {fileID: 0}
+  _weaponIndex: 0
   _creatureName: Race car
+  _mapIndex: 
   _creatureStats:
     MoveSpeed: 0
     AttackPower: 0
@@ -22,3 +24,4 @@ MonoBehaviour:
     CreatureIcon: {fileID: 1557217711, guid: f8a9393c20452f545a454b6792b8be76, type: 3}
     CreaturePrice: 
     CreatureName: Race car
+    CanViewRewardedAd: 0

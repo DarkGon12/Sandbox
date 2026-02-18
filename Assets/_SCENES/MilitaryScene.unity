@@ -652,6 +652,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4360652107854132948, guid: cc3cc80fb4c1ffd4cb6c9a603eebdaf6, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6077,6 +6081,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5412017221204367677, guid: abe3d47b915ca924a9e06dd6d3321396, type: 3}
   m_PrefabInstance: {fileID: 224571921}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &225076586 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6808325054659876050, guid: 89673070d6fb8364b9df68bc10e8f4b6, type: 3}
+  m_PrefabInstance: {fileID: 3865092240831589191}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!114 &225076587 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2307196827371989170, guid: 89673070d6fb8364b9df68bc10e8f4b6, type: 3}
+  m_PrefabInstance: {fileID: 3865092240831589191}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1001 &225299511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29238,7 +29264,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1593449314}
     m_Modifications:
     - target: {fileID: 7490953376921949785, guid: 3db4795cede81cb4688ba6b988f6f248, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51017,7 +51043,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1593449314}
     m_Modifications:
     - target: {fileID: 445066612258978719, guid: 4ec28902914d13545b2a2e107b4687ed, type: 3}
       propertyPath: m_LocalPosition.x
@@ -58237,6 +58263,14 @@ PrefabInstance:
       propertyPath: weaponMotion
       value: 
       objectReference: {fileID: 1618029220}
+    - target: {fileID: 8942314025580370489, guid: 89673070d6fb8364b9df68bc10e8f4b6, type: 3}
+      propertyPath: _playerRoot
+      value: 
+      objectReference: {fileID: 8488568880729177591}
+    - target: {fileID: 8942314025580370489, guid: 89673070d6fb8364b9df68bc10e8f4b6, type: 3}
+      propertyPath: _cameraBasePostion
+      value: 
+      objectReference: {fileID: 1895735108}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -76467,6 +76501,14 @@ PrefabInstance:
       propertyPath: _fireButton
       value: 
       objectReference: {fileID: 1399510479}
+    - target: {fileID: 5760289889916184958, guid: ff5f2e1d973b65e42a7ce37d67d47fef, type: 3}
+      propertyPath: _deadEffect
+      value: 
+      objectReference: {fileID: 225076587}
+    - target: {fileID: 5760289889916184958, guid: ff5f2e1d973b65e42a7ce37d67d47fef, type: 3}
+      propertyPath: _bloodEffect
+      value: 
+      objectReference: {fileID: 225076586}
     - target: {fileID: 5906016245858271703, guid: ff5f2e1d973b65e42a7ce37d67d47fef, type: 3}
       propertyPath: m_Name
       value: Player
@@ -76576,6 +76618,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff5f2e1d973b65e42a7ce37d67d47fef, type: 3}
+--- !u!1 &8488568880729177591 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5906016245858271703, guid: ff5f2e1d973b65e42a7ce37d67d47fef, type: 3}
+  m_PrefabInstance: {fileID: 8488568880729177590}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8595435669523545505
 PrefabInstance:
   m_ObjectHideFlags: 0

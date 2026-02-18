@@ -11,6 +11,8 @@ TagManager:
   - FxTemporaire
   - Tank
   - Helicopter
+  - stone
+  - Entity
   layers:
   - Default
   - TransparentFX
@@ -22,7 +24,7 @@ TagManager:
   - Creature
   - Bullet
   - IgnoreOutline
-  - 
+  - Ice
   - 
   - 
   - 

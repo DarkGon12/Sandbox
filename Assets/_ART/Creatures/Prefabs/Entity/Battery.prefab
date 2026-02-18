@@ -9622,7 +9622,7 @@ GameObject:
   - component: {fileID: 6202066931052203006}
   m_Layer: 7
   m_Name: Battery
-  m_TagString: Untagged
+  m_TagString: Entity
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

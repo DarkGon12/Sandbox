@@ -34,18 +34,19 @@ namespace Creatures.Navigation.States
 
             if (evt.CommandIndex == 0)
             {
+                Debug.Log("I Get command 0 DROP");
                 StateView.EnableColliders(true);
                 IsFinished = true;
                 StateView.SetState(StateView.GetBeforeState);
             }
             if (evt.CommandIndex == 1)
             {
-                euler.y -= 10f;
+                euler.y -= 45f;
                 _thisCreature.localEulerAngles = euler;
             }
             if (evt.CommandIndex == 2)
             {
-                euler.y += 10f;
+                euler.y += 45f;
                 _thisCreature.localEulerAngles = euler;
             }
 

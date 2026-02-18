@@ -4,6 +4,7 @@ using GoogleMobileAds.Common;
 
 public class AppOpenAdController : MonoBehaviour
 {
+    public bool CanShow = true;
     private AppOpenAd _appOpenAd;
     private bool _isShowing;
 
@@ -51,6 +52,8 @@ public class AppOpenAdController : MonoBehaviour
 
     private void ShowIfAvailable()
     {
+        if (!CanShow) return;
+
         if (_isShowing || _appOpenAd == null || !_appOpenAd.CanShowAd())
         {
             Debug.Log("[Ads][AppOpen] Not ready");

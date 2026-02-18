@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3806fda8b6acdcc4dbe5f927b1338b78, type: 3}
+  m_Name: Entity_BlockCube
+  m_EditorClassIdentifier: Assembly-CSharp::Creatures.CreaturesData
+  _creatureType: 1
+  _instanceObject: {fileID: 1972071571038551284, guid: 50b2720262bc4b64a951c6d81b4d9c33, type: 3}
+  _weaponIndex: 0
+  _creatureName: Block cube
+  _mapIndex: 
+  _creatureStats:
+    MoveSpeed: 0
+    AttackPower: 0
+  _creatureUI:
+    CreatureIcon: {fileID: 480124540, guid: d08296f1f89f03c4592d5619c7829572, type: 3}
+    CreaturePrice: 
+    CreatureName: Block cube
+    CanViewRewardedAd: 0

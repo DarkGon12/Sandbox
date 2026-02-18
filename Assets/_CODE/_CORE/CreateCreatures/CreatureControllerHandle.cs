@@ -26,11 +26,18 @@ namespace Creatures.Control
         [SerializeField] private List<GameObject> _playerUI;
 
         [SerializeField] private GameObject _playerRoot;
+        [SerializeField] private Transform _cameraBasePostion;
 
-        [Inject] private IPublisher<ChangePlayerTagEvent> _changePlayerTagEventPub;
+    //    [Inject] private IPublisher<ChangePlayerTagEvent> _changePlayerTagEventPub;
 
         private bool _canControll = true;
         private CreatureInformation _currentCreature;
+        private Camera _mainCam;
+
+        private void Start()
+        {
+            _mainCam = Camera.main;
+        }
 
         private void OnEnable()
         {
@@ -48,14 +55,15 @@ namespace Creatures.Control
         private void Update()
         {
             if (!_canControll) return;
+            if (_currentCreature != null)
+                _enterControlButton.gameObject.SetActive(true);
+            else
+                _enterControlButton.gameObject.SetActive(false);
             TryDetectCreature();
         }
 
         private void TryDetectCreature()
         {
-            if (!_enterControlButton.gameObject.activeSelf)
-                _enterControlButton.gameObject.SetActive(false);
-
             _currentCreature = null;
 
             if (!Physics.Raycast(
@@ -74,8 +82,6 @@ namespace Creatures.Control
             _currentCreature = root.GetComponent<CreatureInformation>();
             if (_currentCreature == null)
                 return;
-
-            _enterControlButton.gameObject.SetActive(true);
         }
 
         public void TakeControl()
@@ -93,15 +99,6 @@ namespace Creatures.Control
             controller.enabled = true;
             controller.EnableControl(this);
 
-            Camera cam = _currentCreature.GetCamera;
-            cam.gameObject.SetActive(true);
-
-            creatureGO.tag = "Player";
-            _changePlayerTagEventPub.Publish(new()
-            {
-                PlayerTarget = creatureGO
-            });
-
             // UI
             _enterControlButton.gameObject.SetActive(false);
             _exitControlButton.gameObject.SetActive(true);
@@ -117,18 +114,14 @@ namespace Creatures.Control
         {
             GameObject go = creature.gameObject;
 
-            go.tag = "Creature";
-            _changePlayerTagEventPub.Publish(new()
-            {
-                PlayerTarget = gameObject
-            });
-
             go.GetComponent<NavMeshAgent>().enabled = true;
             go.GetComponent<CreatureStateView>().enabled = true;
             go.GetComponent<CreatureEnemySensor>().enabled = true;
             go.GetComponent<CreaturesController>().enabled = false;
 
-            creature.GetCamera.gameObject.SetActive(false);
+            _mainCam.transform.SetParent(_cameraBasePostion);
+            _mainCam.transform.localPosition = new Vector3(0, 0.65f, 0.2f);
+            _mainCam.transform.GetChild(0).gameObject.SetActive(true);
 
             _exitControlButton.gameObject.SetActive(false);
 

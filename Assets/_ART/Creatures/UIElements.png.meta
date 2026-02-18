@@ -791,7 +791,7 @@ TextureImporter:
         width: 142
         height: 143
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -800,6 +800,28 @@ TextureImporter:
       bones: []
       spriteID: 26d3fa5ddc3fdbb4b8b93267b37aebc8
       internalID: 652805115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIElements_5
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 30
+        width: 80
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a94a2d8f1f8e23441a4fc5c1b3328e13
+      internalID: 484410261
       vertices: []
       indices: 
       edges: []
@@ -852,6 +874,7 @@ TextureImporter:
       UIElements_47: 1668021162
       UIElements_48: -2146021645
       UIElements_49: 2133252382
+      UIElements_5: 484410261
       UIElements_50: 563791985
       UIElements_Aggro: -713334006
       UIElements_Card: 2038732935

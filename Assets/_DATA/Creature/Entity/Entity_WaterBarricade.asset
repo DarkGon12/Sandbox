@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3806fda8b6acdcc4dbe5f927b1338b78, type: 3}
+  m_Name: Entity_WaterBarricade
+  m_EditorClassIdentifier: Assembly-CSharp::Creatures.CreaturesData
+  _creatureType: 1
+  _instanceObject: {fileID: 5952376149073773413, guid: 004fab6f2a8828d408041cfa08c238a1, type: 3}
+  _weaponIndex: 0
+  _creatureName: WaterBarricade
+  _mapIndex: 
+  _creatureStats:
+    MoveSpeed: 0
+    AttackPower: 0
+  _creatureUI:
+    CreatureIcon: {fileID: 1650717879, guid: d08296f1f89f03c4592d5619c7829572, type: 3}
+    CreaturePrice: 
+    CreatureName: WaterBarricade
+    CanViewRewardedAd: 0

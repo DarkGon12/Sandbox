@@ -3,8 +3,8 @@ using UnityEngine;
 using MessagePipe;
 using Zenject;
 using TMPro;
-using UnityEngine.SceneManagement;
 using Sandbox.Analyse;
+using UnityEditor;
 
 namespace Creatures.UI
 {
@@ -12,6 +12,7 @@ namespace Creatures.UI
     {
         [SerializeField] private Image _creatureIcon;
         [SerializeField] private TextMeshProUGUI _creaturePrice;
+        [SerializeField] private GameObject _creatureAdIcon;
 
         [Inject] private IPublisher<CreateCreatureEvent> _createCreatureEventPub;
         [Inject] private IPublisher<SelectedWeaponEvent> _selectedWeaponEventPub;
@@ -21,6 +22,9 @@ namespace Creatures.UI
 
         [Inject] private IPublisher<CreatureWindowView> _showWindowEventPub;
 
+        [Inject] private RewardedAdService _rewardedService;
+
+        private bool _isLock;
         private int _weaponIndex;
         private string _sceneName;
 
@@ -29,7 +33,21 @@ namespace Creatures.UI
 
         public void SetIcon(Sprite icon) => _creatureIcon.sprite = icon;
         public void SetPrice(string price) => _creaturePrice.text = price;
-        public void SetData(CreaturesData data) => _creatureData = data;
+        public void SetData(CreaturesData data)
+        {
+            _creatureData = data;
+            if (_creatureData.GetUIInfo.CanViewRewardedAd)
+            {
+                _creatureAdIcon.SetActive(true);
+                _isLock = true;
+            }
+        }
+
+        private void OnRewaded()
+        {
+            _isLock = false;
+            _creatureAdIcon.SetActive(false);
+        }
 
         public void Start()
         {
@@ -61,6 +79,12 @@ namespace Creatures.UI
 
         private void CreateCreature()
         {
+            if (_isLock)
+            {
+                _rewardedService.ShowAd(OnRewaded);
+                return;
+            }
+
             _createCreatureEventPub.Publish(new() { CreaturesData = _creatureData });
             _showInterAdEventPub.Publish(new() { });
             _showWindowEventPub.Publish(new() { IsShow = false });
@@ -71,6 +95,12 @@ namespace Creatures.UI
 
         private void SelectWeapon()
         {
+            if (_isLock)
+            {
+                _rewardedService.ShowAd(OnRewaded);
+                return;
+            }
+
             _selectedWeaponEventPub.Publish(new() { WeaponIndex = _weaponIndex });
             _showInterAdEventPub.Publish(new() { });
             _showWindowEventPub.Publish(new() { IsShow = false });
@@ -81,6 +111,12 @@ namespace Creatures.UI
 
         private void SelectMap()
         {
+            if (_isLock)
+            {
+                _rewardedService.ShowAd(OnRewaded);
+                return;
+            }
+
             _loadSceneEventPub.Publish(new() { SceneName = _sceneName });
 
             FirebaseSender.LogEventCreature("User select map",

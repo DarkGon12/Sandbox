@@ -26,6 +26,7 @@ public class SceneAdsController : MonoBehaviour
     private int _interstitialEnergy;
     private IDisposable _disposible;
 
+    public AppOpenAdController GetAppOpen => _appOpen;
     public AdsBanner GetBanner => _banner;
 
     public void CanVisibleInter(bool state) => _canShowInter = state; 

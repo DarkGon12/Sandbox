@@ -1,10 +1,11 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 namespace Sandbox.Player
 {
     public class TouchLookArea : MonoBehaviour
     {
+        public float CurrentPitch => xRotation;
+
         [SerializeField] private float sensitivity = 0.15f;
         [SerializeField] private Transform player;
         [SerializeField] private Transform cam;

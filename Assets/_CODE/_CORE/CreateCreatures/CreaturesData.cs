@@ -38,6 +38,7 @@ namespace Creatures
         public Sprite CreatureIcon;
         public string CreaturePrice;
         public string CreatureName;
+        public bool CanViewRewardedAd;
     }
 
     public enum CreaturesType

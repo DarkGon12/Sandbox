@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -29,7 +28,6 @@ namespace Sandbox.PlayerMove
         void Awake()
         {
             _rb = GetComponent<Rigidbody>();
-
             SetupJetpackButton();
         }
 
@@ -37,7 +35,6 @@ namespace Sandbox.PlayerMove
         {
             float x = _inputJoy.Direction.x;
             float z = _inputJoy.Direction.y;
-
             _moveInput = new Vector3(x, 0f, z).normalized;
 
             CheckGround();
@@ -78,6 +75,7 @@ namespace Sandbox.PlayerMove
         private void SetupJetpackButton()
         {
             if (_jetPackBtn == null) return;
+            if (_jetPackBtn.GetComponent<LockRewardedButton>().Locked) return;
 
             EventTrigger trigger = _jetPackBtn.gameObject.GetComponent<EventTrigger>();
             if (trigger == null)
@@ -92,7 +90,7 @@ namespace Sandbox.PlayerMove
             down.callback.AddListener(_ =>
             {
                 if (_isGrounded)
-                    Jump();       
+                    Jump();
 
                 _jetpackActive = true;
             });

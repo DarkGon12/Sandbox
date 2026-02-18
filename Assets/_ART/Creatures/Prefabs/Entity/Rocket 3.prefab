@@ -66890,7 +66890,7 @@ GameObject:
   - component: {fileID: 4142293491622762784}
   m_Layer: 7
   m_Name: Rocket 3
-  m_TagString: Untagged
+  m_TagString: Entity
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

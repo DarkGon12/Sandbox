@@ -20,6 +20,7 @@ namespace Installers
         {
             Container.Bind<SceneInfo>().FromComponentInHierarchy().AsSingle().NonLazy();
             Container.Bind<AppOpenAdController>().FromComponentInHierarchy().AsSingle().NonLazy();
+            Container.Bind<RewardedAdService>().FromComponentInHierarchy().AsSingle().NonLazy();
         }
 
         private void BindMessages()

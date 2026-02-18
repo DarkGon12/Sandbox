@@ -28,6 +28,20 @@ namespace Creatures.Navigation
            // TryAggro(other);
         }
 
+        public void SetEnemy(CreatureInformation enemy)
+        {
+            CurrentEnemy = enemy;
+
+            if (enemy == null) return;
+            if (enemy == _ownerInfo) return;
+
+            enemy.GetComponent<CreatureEnemySensor>().CurrentEnemy = _ownerInfo;
+            enemy.GetComponent<CreatureStateView>().SetState(_attackState);
+
+            CurrentEnemy = enemy;
+            _ownerView.SetState(_attackState);
+        }
+
         public void ForceRecheck()
         {
             var hits = Physics.OverlapSphere(transform.position, 25f);

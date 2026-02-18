@@ -32,6 +32,7 @@ public class CheatPanels : MonoBehaviour
     {
         _adController.GetBanner.ShowBanner(state);
         _adController.CanVisibleInter(state);
+        _adController.GetAppOpen.CanShow = state;
     }
 
     public void BloodEffectVisible(bool state)

@@ -1,6 +1,7 @@
-using UnityEngine.UI;
 using MessagePipe;
 using UnityEngine;
+using UnityEngine.AdaptivePerformance.Provider;
+using UnityEngine.UI;
 using Zenject;
 
 namespace Creatures.Navigation
@@ -14,6 +15,7 @@ namespace Creatures.Navigation
 
         private Camera _camera;
         private Button _button;
+        private GameObject _selectCreature;
 
         private void Start()
         {
@@ -46,6 +48,7 @@ namespace Creatures.Navigation
                 if (root.CompareTag("Creature"))
                 {
                     creature = root.gameObject;
+                    _selectCreature = creature;
                 }
             }
 
@@ -58,6 +61,5 @@ namespace Creatures.Navigation
                 AnyCommand = _anyCommand
             });
         }
-
     }
 }

@@ -65,7 +65,7 @@ namespace Creatures.Navigation
 
         public void UpdateTagEvent(ChangePlayerTagEvent evt)
         {
-            _playerTarget = evt.PlayerTarget;
+          //  _playerTarget = evt.PlayerTarget;
         }
 
         public void EnableColliders(bool state)
@@ -78,7 +78,7 @@ namespace Creatures.Navigation
 
         public void SetState(CreatureState state)
         {
-            if (_currentState != null)
+            if (_currentState != null && _beforeState.Equals(_currentState))
                 _beforeState = _currentState;
 
             _currentState = Instantiate(state);

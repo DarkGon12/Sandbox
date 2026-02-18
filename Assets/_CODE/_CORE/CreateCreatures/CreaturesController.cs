@@ -1,4 +1,5 @@
 using Creatures.Navigation;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,7 +17,9 @@ namespace Creatures.Control
 
         [Header("Combat")]
         [SerializeField] private int _damage = 15;
-        [SerializeField] private float _attackRange = 1.5f;
+        [SerializeField] private float _attackDistance = 1.5f;
+        [SerializeField] private float _attackRadius = 0.5f;
+        [SerializeField] private LayerMask _creatureLayer;
         [SerializeField] private float _attackCooldown = 0.8f;
 
         private float _nextAttackTime;
@@ -29,6 +32,7 @@ namespace Creatures.Control
         private FloatingJoystick _joy;
         private CarControlButton _attackButton;
         private Button _exitButton;
+        private Camera _mainCam;
 
         private float xRotation;
         private int lookFingerId = -1;
@@ -42,6 +46,7 @@ namespace Creatures.Control
             anim = GetComponentInChildren<Animator>();
             info = GetComponent<CreatureInformation>();
             enabled = false;
+            _mainCam = Camera.main;
         }
 
         public void EnableControl(CreatureControllerHandle owner)
@@ -53,6 +58,11 @@ namespace Creatures.Control
 
             _exitButton.onClick.RemoveAllListeners();
             _exitButton.onClick.AddListener(() => _owner.ReleaseControl(info));
+
+            _mainCam.transform.SetParent(_camPivot);
+            _mainCam.transform.localPosition = Vector3.zero;
+            _mainCam.transform.rotation = _camPivot.rotation;
+            _mainCam.transform.GetChild(0).gameObject.SetActive(false);
 
             _active = true;
             enabled = true;
@@ -151,24 +161,32 @@ namespace Creatures.Control
         {
             anim.SetTrigger("attack");
 
+            Vector3 center = transform.position + transform.forward * _attackDistance;
+
             Collider[] hits = Physics.OverlapSphere(
-                transform.position + transform.forward * _attackRange,
-                _attackRange);
+                center,
+                _attackRadius,
+                ~0,
+                QueryTriggerInteraction.Ignore
+            );
+            HashSet<CreatureInformation> damagedTargets = new HashSet<CreatureInformation>();
 
             foreach (var hit in hits)
             {
-                if (!hit.transform.root.CompareTag("Creature"))
+                var target = hit.transform.root.GetComponent<CreatureInformation>();
+
+                if (target == null || target == info)
                     continue;
 
-                var target = hit.transform.root.GetComponent<CreatureInformation>();
-                if (target != null && target != info)
+                if (damagedTargets.Add(target))
                 {
                     target.TakeDamage(_damage, info);
+                    target.GetComponent<CreatureEnemySensor>().SetEnemy(info);
                 }
             }
         }
 
-        private void OnDeath()
+        public void OnDeath()
         {
             _owner.ReleaseControl(info);
             enabled = false;
@@ -176,7 +194,7 @@ namespace Creatures.Control
 
         private void OnDestroy()
         {
-            if (_active && _owner != null)
+            if (enabled == true)
                 _owner.ReleaseControl(info);
         }
     }

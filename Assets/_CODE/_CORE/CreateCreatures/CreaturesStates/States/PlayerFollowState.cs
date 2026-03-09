@@ -6,6 +6,8 @@ namespace Creatures.Navigation.States
     [CreateAssetMenu(fileName = "creatureState", menuName = "Creature/State/FollowState")]
     public class PlayerFollowState : CreatureState
     {
+        private Vector3 _lastTargetPos;
+
         private DiContainer _container;
         private Transform _player;
 
@@ -24,19 +26,17 @@ namespace Creatures.Navigation.States
         {
             if (IsFinished) return;
 
-            float distance = Vector3.Distance(_player.position, StateView.transform.position);
-
-            if (distance > 4f)
+            if (Vector3.SqrMagnitude(_player.position - _lastTargetPos) > 1f)
             {
                 StateView.GetAgent.isStopped = false;
                 MoveAnimation(true);
 
                 StateView.MoveToPoint(_player);
+                _lastTargetPos = _player.position;
             }
             else
             {
                 StateView.GetAgent.isStopped = true;
-
                 MoveAnimation(false);
             }
         }

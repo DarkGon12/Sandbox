@@ -1,4 +1,3 @@
-using GoogleMobileAds.Api;
 using UnityEngine;
 
 public class GoogleMobileAdsController : MonoBehaviour
@@ -16,18 +15,11 @@ public class GoogleMobileAdsController : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
-
-        Initialize();
     }
 
-    private void Initialize()
+    public static void SetInitialized()
     {
-        Debug.Log("[Ads] Initializing MobileAds");
-
-        MobileAds.Initialize(initStatus =>
-        {
-            IsInitialized = true;
-            Debug.Log("[Ads] MobileAds initialized");
-        });
+        IsInitialized = true;
+        Debug.Log("[Ads] SDK Ready");
     }
 }

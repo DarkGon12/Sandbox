@@ -2,33 +2,28 @@
   <packages>
     <package>androidx.constraintlayout:constraintlayout:2.1.4</package>
     <package>androidx.lifecycle:lifecycle-process:2.6.2</package>
+    <package>com.google.ads.mediation:facebook:6.20.0.0</package>
+    <package>com.google.ads.mediation:fyber:8.3.8.0</package>
+    <package>com.google.ads.mediation:inmobi:10.8.3.1</package>
+    <package>com.google.ads.mediation:ironsource:8.10.0.0</package>
+    <package>com.google.ads.mediation:mintegral:16.9.91.0</package>
+    <package>com.google.ads.mediation:pangle:7.3.0.5.0</package>
+    <package>com.google.ads.mediation:unity:4.16.0.0</package>
+    <package>com.google.ads.mediation:vungle:7.5.0.1</package>
     <package>com.google.android.gms:play-services-ads:24.9.0</package>
     <package>com.google.android.gms:play-services-base:18.10.0</package>
     <package>com.google.android.ump:user-messaging-platform:3.2.0</package>
     <package>com.google.firebase:firebase-analytics:23.0.0</package>
-    <package>com.google.firebase:firebase-analytics-unity:13.8.0</package>
-    <package>com.google.firebase:firebase-appcheck:19.0.2</package>
-    <package>com.google.firebase:firebase-appcheck-debug:19.0.2</package>
-    <package>com.google.firebase:firebase-appcheck-playintegrity:19.0.2</package>
-    <package>com.google.firebase:firebase-appcheck-unity:13.8.0</package>
-    <package>com.google.firebase:firebase-app-unity:13.8.0</package>
-    <package>com.google.firebase:firebase-auth:24.0.1</package>
-    <package>com.google.firebase:firebase-auth-unity:13.8.0</package>
+    <package>com.google.firebase:firebase-analytics-unity:13.9.0</package>
+    <package>com.google.firebase:firebase-app-unity:13.9.0</package>
     <package>com.google.firebase:firebase-common:22.0.1</package>
-    <package>com.google.firebase:firebase-storage:22.0.1</package>
-    <package>com.google.firebase:firebase-storage-unity:13.8.0</package>
+    <package>com.unity3d.ads:unity-ads:4.16.0</package>
   </packages>
   <files>
-    <file>Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-analytics-unity/13.8.0/firebase-analytics-unity-13.8.0.aar</file>
-    <file>Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-analytics-unity/13.8.0/firebase-analytics-unity-13.8.0.pom</file>
-    <file>Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-appcheck-unity/13.8.0/firebase-appcheck-unity-13.8.0.aar</file>
-    <file>Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-appcheck-unity/13.8.0/firebase-appcheck-unity-13.8.0.pom</file>
-    <file>Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-app-unity/13.8.0/firebase-app-unity-13.8.0.aar</file>
-    <file>Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-app-unity/13.8.0/firebase-app-unity-13.8.0.pom</file>
-    <file>Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-auth-unity/13.8.0/firebase-auth-unity-13.8.0.aar</file>
-    <file>Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-auth-unity/13.8.0/firebase-auth-unity-13.8.0.pom</file>
-    <file>Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-storage-unity/13.8.0/firebase-storage-unity-13.8.0.aar</file>
-    <file>Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-storage-unity/13.8.0/firebase-storage-unity-13.8.0.pom</file>
+    <file>Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-analytics-unity/13.9.0/firebase-analytics-unity-13.9.0.aar</file>
+    <file>Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-analytics-unity/13.9.0/firebase-analytics-unity-13.9.0.pom</file>
+    <file>Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-app-unity/13.9.0/firebase-app-unity-13.9.0.aar</file>
+    <file>Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-app-unity/13.9.0/firebase-app-unity-13.9.0.pom</file>
   </files>
   <settings>
     <setting name="androidAbis" value="arm64-v8a,armeabi-v7a" />

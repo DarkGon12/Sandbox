@@ -21,6 +21,11 @@ public class CreatureDeadEvent
     public bool UpdateList;
 }
 
+public class CreatureRemoveAll
+{
+
+}
+
 public class CreatureTransformCommandEvent
 {
     public int CommandIndex;

@@ -5562,9 +5562,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4c97cc1e88ab15408b80747079dcd90, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SCC_Audio
-  engineOn: {fileID: 0}
-  engineOff: {fileID: 0}
+  m_EditorClassIdentifier: 
+  engineOn: {fileID: 8300000, guid: a12994710b32cc8419ffe62c8f5237d3, type: 3}
+  engineOff: {fileID: 8300000, guid: c11079e88c329ea4db20aa48f82ab57a, type: 3}
   minimumVolume: 0.1
   maximumVolume: 1
   minimumPitch: 0.75

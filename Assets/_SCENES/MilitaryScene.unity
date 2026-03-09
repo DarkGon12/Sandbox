@@ -3680,6 +3680,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38be789410d69ef40a29459dfa506f11, type: 3}
+--- !u!114 &141257602 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5262415531693290797, guid: 89673070d6fb8364b9df68bc10e8f4b6, type: 3}
+  m_PrefabInstance: {fileID: 3865092240831589191}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &142079024
 GameObject:
   m_ObjectHideFlags: 0
@@ -16587,7 +16598,7 @@ GameObject:
   m_Component:
   - component: {fileID: 618537057}
   - component: {fileID: 618537058}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33462,7 +33473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1280855771}
   - component: {fileID: 1280855772}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39777,7 +39788,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1610865245}
   - component: {fileID: 1610865246}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43608,7 +43619,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1766373370}
   - component: {fileID: 1766373371}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49867,7 +49878,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2012307618}
   - component: {fileID: 2012307619}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51248,7 +51259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2066216913}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MapZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76429,6 +76440,10 @@ PrefabInstance:
       propertyPath: _agrroPlayerButton
       value: 
       objectReference: {fileID: 1363156067}
+    - target: {fileID: 1982825745383999353, guid: ff5f2e1d973b65e42a7ce37d67d47fef, type: 3}
+      propertyPath: _creatureRemoveAllButton
+      value: 
+      objectReference: {fileID: 141257602}
     - target: {fileID: 3250182890655217287, guid: ff5f2e1d973b65e42a7ce37d67d47fef, type: 3}
       propertyPath: _fireButton
       value: 

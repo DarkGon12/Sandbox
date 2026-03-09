@@ -1046,14 +1046,14 @@ MonoBehaviour:
   - wheelTransform: {fileID: 5725001654299593071}
     wheelCollider: {fileID: 2276657233748733447}
     isSteering: 1
-    steeringAngle: 25
+    steeringAngle: 40
     isTraction: 1
     isBrake: 1
     isHandbrake: 1
   - wheelTransform: {fileID: 6807932442994829204}
     wheelCollider: {fileID: 7012214254454264094}
     isSteering: 1
-    steeringAngle: 25
+    steeringAngle: 40
     isTraction: 1
     isBrake: 1
     isHandbrake: 1
@@ -1109,17 +1109,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3654576913993658286}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4c97cc1e88ab15408b80747079dcd90, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SCC_Audio
-  engineOn: {fileID: 0}
-  engineOff: {fileID: 0}
+  m_EditorClassIdentifier: 
+  engineOn: {fileID: 8300000, guid: a12994710b32cc8419ffe62c8f5237d3, type: 3}
+  engineOff: {fileID: 8300000, guid: c11079e88c329ea4db20aa48f82ab57a, type: 3}
   minimumVolume: 0.1
   maximumVolume: 1
-  minimumPitch: 0.75
-  maximumPitch: 1.25
+  minimumPitch: 0.7
+  maximumPitch: 1.75
 --- !u!114 &2930162660174514432
 MonoBehaviour:
   m_ObjectHideFlags: 0

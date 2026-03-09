@@ -21,6 +21,7 @@ namespace Creatures
 
         [SerializeField] private GameObject _agrroButton;
         [SerializeField] private GameObject _agrroPlayerButton;
+        [SerializeField] private Button _creatureRemoveAllButton;
 
         [SerializeField] private CreaturesWindow _creaturesWindow;
 
@@ -28,6 +29,7 @@ namespace Creatures
 
         [Inject] private ISubscriber<CreatureDeadEvent> _creatureDeadEventSub;
         [Inject] private ISubscriber<CreateCreatureEvent> _createCreatureEventSub;
+        [Inject] private ISubscriber<CreatureRemoveAll> _creatureRemoveAllEventSub;
         [Inject] private DiContainer _container;
 
         private CreaturesData _selectedCreature;
@@ -41,6 +43,7 @@ namespace Creatures
             var bag = DisposableBag.CreateBuilder();
             _createCreatureEventSub.Subscribe(InstantiateCreatureEvent).AddTo(bag);
             _creatureDeadEventSub.Subscribe(CreatureDeadEvent).AddTo(bag);
+            _creatureRemoveAllEventSub.Subscribe(CreatureRemoveAllEvent).AddTo(bag);
             bag.Add(_disposable);
             _disposable = bag.Build();
         }
@@ -96,22 +99,39 @@ namespace Creatures
             UpdateInvisibleInterface();
         }
 
+        public void CreatureRemoveAllEvent(CreatureRemoveAll evt)
+        {
+            for (int i = 0; i < _creatureCollection.Count; i++)
+            {
+                Destroy(_creatureCollection[i].gameObject);
+            }
+
+            _creatureCollection.Clear();
+            UpdateInvisibleInterface();
+        }
+
         public void UpdateInvisibleInterface()
         {
             int creatureCounter = 0;
+            int entityCounter = _creatureCollection.Count;
 
-            for(int i = 0; i < _creatureCollection.Count; i++)
+            for (int i = 0; i < _creatureCollection.Count; i++)
             {
-                if(_creatureCollection[i].gameObject.tag == "Creature") 
+                if (_creatureCollection[i].gameObject.tag == "Creature")
                     creatureCounter++;
             }
 
-            if(creatureCounter > 0)
+            if (entityCounter > 0)
+                _creatureRemoveAllButton.interactable = true;
+            else
+                _creatureRemoveAllButton.interactable = false;
+
+            if (creatureCounter > 0)
                 _agrroPlayerButton.SetActive(true);
             else
                 _agrroPlayerButton.SetActive(false);
 
-            if (creatureCounter > 1) 
+            if (creatureCounter > 1)
                 _agrroButton.SetActive(true);
             else
                 _agrroButton.SetActive(false);

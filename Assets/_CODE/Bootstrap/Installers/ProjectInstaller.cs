@@ -28,6 +28,7 @@ namespace Installers
             Container.BindMessageBroker<LoadSceneEvent>(options);
             Container.BindMessageBroker<ShowInterstitialAdEvent>(options);
 
+            Container.BindMessageBroker<CreatureRemoveAll>(options);
             Container.BindMessageBroker<CreatureDeadEvent>(options);
             Container.BindMessageBroker<CreateCreatureEvent>(options); 
             Container.BindMessageBroker<CreatureCommandEvent>(options);

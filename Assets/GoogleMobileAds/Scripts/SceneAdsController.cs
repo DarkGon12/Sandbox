@@ -35,6 +35,9 @@ public class SceneAdsController : MonoBehaviour
     {
         yield return new WaitUntil(() => GoogleMobileAdsController.IsInitialized);
 
+        //_interstitialCoolDown = RemoteConfigManager.InterstitialDelay;
+       // Debug.Log("[Ads] Cooldown from Firebase: " + _interstitialCoolDown);
+
         _appOpen.LoadAd();
 
         _interstitialEnergy = _interstitialMaxEnergy;

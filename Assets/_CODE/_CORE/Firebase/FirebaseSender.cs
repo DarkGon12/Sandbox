@@ -35,6 +35,11 @@ namespace Sandbox.Analyse
 
         private static void Initialize()
         {
+           // RemoteConfigManager.Initialize().ContinueWithOnMainThread(task =>
+           // {
+           //     Debug.Log("[RemoteConfig] Loaded");
+           // });
+
             Debug.Log("[Firebase] Initializing Analytics");
 
             FirebaseAnalytics.SetAnalyticsCollectionEnabled(true);

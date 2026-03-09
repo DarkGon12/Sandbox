@@ -13,13 +13,23 @@ MonoBehaviour:
   m_Name: CreatureRepository
   m_EditorClassIdentifier: Assembly-CSharp::Creatures.CreaturesRepository
   CreaturesCollection:
+  - {fileID: 11400000, guid: 5ffff2b3bf0a7f746be3541bf95fd4f8, type: 2}
+  - {fileID: 11400000, guid: 28f36c1d288a967458a0cc217c239fc9, type: 2}
+  - {fileID: 11400000, guid: ecf1d69af0e96b6479770b7857ccbc2b, type: 2}
   - {fileID: 11400000, guid: b66a0e4b36685754985c34bba066a7cf, type: 2}
+  - {fileID: 11400000, guid: 7be49d21c706861459e6ec39aed7d489, type: 2}
+  - {fileID: 11400000, guid: 454b0e3d5f95e5d4abd13b24f6276592, type: 2}
+  - {fileID: 11400000, guid: ffd721065737bcf4895118ed422d1004, type: 2}
+  - {fileID: 11400000, guid: 511e0a0cacb3d054e960fcae3c383684, type: 2}
+  - {fileID: 11400000, guid: 1fb0cd61f1196924c8a536bde7382050, type: 2}
+  - {fileID: 11400000, guid: d29737125e211594ab9de488fa9f9cad, type: 2}
   - {fileID: 11400000, guid: efb412b35b77fff4dab75b2a040c80fa, type: 2}
   - {fileID: 11400000, guid: 1a5208f7a6cc6fc489dc9900b60466e6, type: 2}
   - {fileID: 11400000, guid: 92df73b3e45065a4d81d9de54eb539a8, type: 2}
   - {fileID: 11400000, guid: 4b3340f4e23ee114f930842d090b13d1, type: 2}
   - {fileID: 11400000, guid: c742058626fc99c489b95a7bdd1f79c4, type: 2}
   - {fileID: 11400000, guid: 21e31878f08202b4e97189dcf42f68b1, type: 2}
+  - {fileID: 11400000, guid: ae4189138fb3b204786504c3d1017c91, type: 2}
   - {fileID: 11400000, guid: 5eb2172db61ea3949bdd764ff4ca1285, type: 2}
   - {fileID: 11400000, guid: f697630d62dc02a4aac267d415ea9dbe, type: 2}
   - {fileID: 11400000, guid: dac3a93ba22f2a54c84662cd3c927a5d, type: 2}
@@ -40,6 +50,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6ec4044361ae1e04e806bbd8dfadb2e1, type: 2}
   - {fileID: 11400000, guid: 62c484edb55e621449b2e683a63db2b0, type: 2}
   - {fileID: 11400000, guid: 61cfcbf4a91f54747ac630c5787efbd1, type: 2}
+  - {fileID: 11400000, guid: 6d3d5dfbc7591194cb5775d0e911fe43, type: 2}
   - {fileID: 11400000, guid: f937efc519773194788843d7eb682d34, type: 2}
   - {fileID: 11400000, guid: 18f89c237055f194db64d0c91e244d19, type: 2}
   - {fileID: 11400000, guid: 41f4416830c6bc94db7b20232e547c81, type: 2}
@@ -62,6 +73,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: de6dc61f473adce4a8c64db444412a19, type: 2}
   - {fileID: 11400000, guid: 26d76ebd2d7405e47802f97c5f4e0081, type: 2}
   - {fileID: 11400000, guid: d47d319e42fca3742bc8670b23ae111f, type: 2}
+  - {fileID: 11400000, guid: faa9f4d18836c7f418b8571776911933, type: 2}
   - {fileID: 11400000, guid: 5e0e8e8f2e0ade24ba73efac82b41466, type: 2}
   - {fileID: 11400000, guid: c130295412eaaae43aadadae4b26c876, type: 2}
   - {fileID: 11400000, guid: dbb2855bf702b7d449fbcd6bb9e57374, type: 2}

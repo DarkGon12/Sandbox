@@ -10,6 +10,9 @@ namespace Creatures.Navigation
 {
     public class CreatureStateView : MonoBehaviour
     {
+        [SerializeField] private float tickRate = 0.25f;
+        [SerializeField] private bool _2DCharacter;
+
         [SerializeField] private CreatureState _beforeState;
         [SerializeField] private CreatureState _startState;
         [SerializeField] private CreatureState _currentState;
@@ -22,6 +25,7 @@ namespace Creatures.Navigation
         [Inject] private ISubscriber<CreatureCommandEvent> _commadEventSub;
         [Inject] private DiContainer _container;
 
+        private float _nextTick;
         private CreatureEnemySensor _creatureSensor;
         private CreatureInformation _creatureInfo;
 
@@ -70,6 +74,8 @@ namespace Creatures.Navigation
 
         public void EnableColliders(bool state)
         {
+            if (_2DCharacter) return;
+
             _boxCollider.enabled = state;
 
             for (int i = 0; i < _colliders.Count; i++)
@@ -90,6 +96,9 @@ namespace Creatures.Navigation
 
         private void Update()
         {
+            if (Time.time < _nextTick) return;
+            _nextTick = Time.time + tickRate;
+
             if (!_currentState.IsFinished)
                 _currentState.Run();
             else

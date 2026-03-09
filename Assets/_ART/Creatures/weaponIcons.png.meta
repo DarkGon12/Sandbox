@@ -285,7 +285,7 @@ TextureImporter:
         width: 135
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -294,6 +294,28 @@ TextureImporter:
       bones: []
       spriteID: ac043ebbc178c9443b2373f837bf7dd7
       internalID: -160281342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weaponIcons_8
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 801
+        width: 390
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb1f074c413d75d4f94c756eb3545675
+      internalID: 405099531
       vertices: []
       indices: 
       edges: []
@@ -320,6 +342,7 @@ TextureImporter:
       weaponIcons_5: -1687854304
       weaponIcons_6: 2021923961
       weaponIcons_7: -160281342
+      weaponIcons_8: 405099531
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

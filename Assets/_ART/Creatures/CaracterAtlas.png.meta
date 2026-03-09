@@ -148,9 +148,9 @@ TextureImporter:
       name: CaracterAtlas_1
       rect:
         serializedVersion: 2
-        x: 152
+        x: 143
         y: 779
-        width: 295
+        width: 302
         height: 245
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -492,6 +492,50 @@ TextureImporter:
       bones: []
       spriteID: cf95e0c887deff2439c47e2e31a8f80b
       internalID: -1664705832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaracterAtlas_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 156
+        width: 217
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4abae3af707973744b307860d619911c
+      internalID: -246999862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaracterAtlas_5
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 149
+        width: 198
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a17328ec19a80d0418b206817ba44edb
+      internalID: 1314351324
       vertices: []
       indices: 
       edges: []

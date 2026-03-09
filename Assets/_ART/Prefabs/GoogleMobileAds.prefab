@@ -47,5 +47,5 @@ MonoBehaviour:
   _interstitialAdInfoPanel: {fileID: 0}
   _interstitialAdInfoText: {fileID: 0}
   _interstitialMaxEnergy: 2
-  _interstitialCoolDown: 90
+  _interstitialCoolDown: 60
   _readyInterstitial: 1

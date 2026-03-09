@@ -239,6 +239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5720652596572692520}
   - component: {fileID: 215075523545616653}
+  - component: {fileID: 6396740355573131753}
   m_Layer: 0
   m_Name: GoogleMobileAds
   m_TagString: Untagged
@@ -273,6 +274,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50ec1ada8d3317a4680dc2bb966dd48e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GoogleMobileAdsController
+--- !u!114 &6396740355573131753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8654880028922740820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b942024295f5f94cb494cb5e598397d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ConsentManager
 --- !u!1 &8987043546962160492
 GameObject:
   m_ObjectHideFlags: 0

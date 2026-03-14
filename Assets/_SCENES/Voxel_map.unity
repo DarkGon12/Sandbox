@@ -327,6 +327,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 985070044}
     - target: {fileID: 1982825745383999353, guid: ff5f2e1d973b65e42a7ce37d67d47fef, type: 3}
+      propertyPath: _perfomanceManager
+      value: 
+      objectReference: {fileID: 985070023}
+    - target: {fileID: 1982825745383999353, guid: ff5f2e1d973b65e42a7ce37d67d47fef, type: 3}
       propertyPath: _creatureRemoveAllButton
       value: 
       objectReference: {fileID: 74817724}
@@ -12022,17 +12026,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3655851796873149655, guid: 89673070d6fb8364b9df68bc10e8f4b6, type: 3}
-      propertyPath: m_fontSize
-      value: 37
-      objectReference: {fileID: 0}
-    - target: {fileID: 3905691342300605655, guid: 89673070d6fb8364b9df68bc10e8f4b6, type: 3}
-      propertyPath: m_fontSize
-      value: 41.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 6735835529114430441, guid: 89673070d6fb8364b9df68bc10e8f4b6, type: 3}
-      propertyPath: m_Color.a
-      value: 0.78431374
+    - target: {fileID: 5101939739229406547, guid: 89673070d6fb8364b9df68bc10e8f4b6, type: 3}
+      propertyPath: _debug
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7546319287305790796, guid: 89673070d6fb8364b9df68bc10e8f4b6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -12050,10 +12046,6 @@ PrefabInstance:
       propertyPath: weaponMotion
       value: 
       objectReference: {fileID: 89687054}
-    - target: {fileID: 8854342497538266058, guid: 89673070d6fb8364b9df68bc10e8f4b6, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8942314025580370489, guid: 89673070d6fb8364b9df68bc10e8f4b6, type: 3}
       propertyPath: _playerRoot
       value: 
@@ -12067,6 +12059,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89673070d6fb8364b9df68bc10e8f4b6, type: 3}
+--- !u!114 &985070023 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5101939739229406547, guid: 89673070d6fb8364b9df68bc10e8f4b6, type: 3}
+  m_PrefabInstance: {fileID: 985070022}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e96f4a931a9ce79499a6e06721cf3883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MobilePerfomanceManager
 --- !u!1 &985070024 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 650057230710037875, guid: 89673070d6fb8364b9df68bc10e8f4b6, type: 3}

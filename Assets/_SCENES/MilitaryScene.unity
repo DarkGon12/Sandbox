@@ -13299,6 +13299,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5412017221204367677, guid: abe3d47b915ca924a9e06dd6d3321396, type: 3}
   m_PrefabInstance: {fileID: 470591460}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &471992609 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5101939739229406547, guid: 89673070d6fb8364b9df68bc10e8f4b6, type: 3}
+  m_PrefabInstance: {fileID: 3865092240831589191}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e96f4a931a9ce79499a6e06721cf3883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MobilePerfomanceManager
 --- !u!1001 &477163809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76440,6 +76451,10 @@ PrefabInstance:
       propertyPath: _agrroPlayerButton
       value: 
       objectReference: {fileID: 1363156067}
+    - target: {fileID: 1982825745383999353, guid: ff5f2e1d973b65e42a7ce37d67d47fef, type: 3}
+      propertyPath: _perfomanceManager
+      value: 
+      objectReference: {fileID: 471992609}
     - target: {fileID: 1982825745383999353, guid: ff5f2e1d973b65e42a7ce37d67d47fef, type: 3}
       propertyPath: _creatureRemoveAllButton
       value: 

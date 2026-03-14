@@ -1,9 +1,10 @@
-using Firebase.Extensions;
-using Firebase.Analytics;
-using UnityEngine;
-using Firebase;
-using System;
 using Creatures;
+using Firebase;
+using Firebase.Analytics;
+using Firebase.Crashlytics;
+using Firebase.Extensions;
+using System;
+using UnityEngine;
 
 namespace Sandbox.Analyse
 {
@@ -35,10 +36,9 @@ namespace Sandbox.Analyse
 
         private static void Initialize()
         {
-           // RemoteConfigManager.Initialize().ContinueWithOnMainThread(task =>
-           // {
-           //     Debug.Log("[RemoteConfig] Loaded");
-           // });
+            Crashlytics.IsCrashlyticsCollectionEnabled = true;
+
+            RemoteConfigManager.Initialize();
 
             Debug.Log("[Firebase] Initializing Analytics");
 

@@ -1,13 +1,14 @@
-using System.Collections.Generic;
-using UnityEngine;
-using MessagePipe;
-using Zenject;
-using System;
-using UnityEngine.UI;
-using TMPro;
-using Sandbox.Player;
 using Creatures.Navigation;
 using Creatures.UI;
+using MessagePipe;
+using Sandbox.Player;
+using System;
+using System.Collections.Generic;
+using TMPro;
+using Unity.Entities.UniversalDelegates;
+using UnityEngine;
+using UnityEngine.UI;
+using Zenject;
 
 
 namespace Creatures
@@ -18,6 +19,7 @@ namespace Creatures
         [SerializeField] private Image _creatureIconInToolGun;
         [SerializeField] private CarControlButton _shootToolGun;
         [SerializeField] private WeaponHolderMotion _motion;
+        [SerializeField] private MobilePerfomanceManager _perfomanceManager;
 
         [SerializeField] private GameObject _agrroButton;
         [SerializeField] private GameObject _agrroPlayerButton;
@@ -89,6 +91,7 @@ namespace Creatures
             _creatureCollection.Add(creature);
             UpdateInvisibleInterface();
             _motion.PlayShoot();
+            UpdatePerfomance();
         }
 
         public void CreatureDeadEvent(CreatureDeadEvent evt)
@@ -97,6 +100,37 @@ namespace Creatures
 
             _creatureCollection.RemoveAll(x => x == null);
             UpdateInvisibleInterface();
+        }
+
+        public void UpdatePerfomance()
+        {
+            int creatureCounter = 0;
+            int entytiesCounter = 0;
+
+            for (int i = 0; i < _creatureCollection.Count; i++)
+            {
+                if (_creatureCollection[i].gameObject.tag == "Creature")
+                {
+                    creatureCounter++;
+                    if (creatureCounter >= _perfomanceManager.GetMaxCreature())
+                    {
+                        GameObject cashObject = _creatureCollection[0].gameObject;
+                        _creatureCollection.Remove(cashObject);
+                        Destroy(cashObject);
+                    }
+                }
+             
+                if (_creatureCollection[i].gameObject.tag != "Creature")
+                {
+                    entytiesCounter++;
+                    if (entytiesCounter >= _perfomanceManager.GetMaxCreature())
+                    {
+                        GameObject cashObject = _creatureCollection[0].gameObject;
+                        _creatureCollection.Remove(cashObject);
+                        Destroy(cashObject);
+                    }
+                }
+            }
         }
 
         public void CreatureRemoveAllEvent(CreatureRemoveAll evt)

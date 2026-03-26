@@ -38,6 +38,9 @@ namespace Installers
             Container.BindMessageBroker<CreatureWindowView>(options);
             Container.BindMessageBroker<CreatureVisibleEffect>(options);
             Container.BindMessageBroker<ChangePlayerTagEvent>(options);
+
+            Container.BindMessageBroker<IAPManagerSendEvent>(options);
+            Container.BindMessageBroker<IAPManagerResultEvent>(options);
         }
     }
 }

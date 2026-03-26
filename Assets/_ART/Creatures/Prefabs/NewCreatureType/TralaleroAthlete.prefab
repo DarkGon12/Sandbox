@@ -1216,7 +1216,7 @@ GameObject:
   - component: {fileID: 7044885219673797448}
   - component: {fileID: 5791020540766292816}
   - component: {fileID: 2283549184766914268}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TralaleroAthlete
   m_TagString: Creature
   m_Icon: {fileID: 0}
@@ -1307,6 +1307,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11e1f382533679c4aa93e48f6d75863a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CreatureStateView
+  tickRate: 0.25
+  _2DCharacter: 0
   _beforeState: {fileID: 11400000, guid: 30c4113e382aa9047abd284f7e01087a, type: 2}
   _startState: {fileID: 11400000, guid: 30c4113e382aa9047abd284f7e01087a, type: 2}
   _currentState: {fileID: 11400000, guid: 4582dfbb91e3ab84fa34e6e74f809654, type: 2}
@@ -1489,7 +1491,11 @@ MonoBehaviour:
   _camPivot: {fileID: 5895842473579558230}
   sensitivity: 0.15
   _damage: 15
-  _attackRange: 0.01
+  _attackDistance: 1.5
+  _attackRadius: 0.5
+  _creatureLayer:
+    serializedVersion: 2
+    m_Bits: 0
   _attackCooldown: 1.8
 --- !u!1 &3042994168852613905
 GameObject:

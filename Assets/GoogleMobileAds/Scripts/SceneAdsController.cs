@@ -45,7 +45,6 @@ public class SceneAdsController : MonoBehaviour
         _interstitialEnergy = _interstitialMaxEnergy;
         var bag = DisposableBag.CreateBuilder();
         _showInterAdEventSub.Subscribe(OnShowInterAdEvent).AddTo(bag);
-        bag.Add(_disposible);
         _disposible = bag.Build();
 
         _banner = new AdsBanner();

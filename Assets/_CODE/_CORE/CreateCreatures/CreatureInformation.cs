@@ -6,7 +6,7 @@ using Creatures.Control;
 
 namespace Creatures.Navigation
 {
-    public class CreatureInformation : MonoBehaviour
+    public class CreatureInformation : MonoBehaviour, ICreatureDamage
     {
         [SerializeField] private int _health;
         [SerializeField] private int _level = 1;

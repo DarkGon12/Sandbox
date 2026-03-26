@@ -5748,7 +5748,7 @@ GameObject:
   - component: {fileID: 7238098444452774683}
   - component: {fileID: 6030208376925399437}
   - component: {fileID: 3970484618152346074}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Dedmoroz
   m_TagString: Creature
   m_Icon: {fileID: 0}

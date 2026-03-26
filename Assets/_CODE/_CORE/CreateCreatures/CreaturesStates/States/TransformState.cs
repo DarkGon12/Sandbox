@@ -22,7 +22,6 @@ namespace Creatures.Navigation.States
 
             var bag = DisposableBag.CreateBuilder();
             _transformEventSub.Subscribe(CompleteCommand).AddTo(bag);
-            bag.Add(_disposable);
             _disposable = bag.Build();
 
             StateView.EnableColliders(false);

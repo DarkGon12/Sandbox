@@ -55,7 +55,6 @@ namespace Creatures.Navigation
             _changePlayerTagEventSub.Subscribe(UpdateTagEvent).AddTo(bag);
             _creatureDeadEventSub.Subscribe(CreatureDeadEvent).AddTo(bag);
             _commadEventSub.Subscribe(InitCommand).AddTo(bag);
-            bag.Add(_disposable);
             _disposable = bag.Build();
 
             _creatureSensor = GetComponent<CreatureEnemySensor>();

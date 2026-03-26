@@ -841,7 +841,7 @@ GameObject:
   - component: {fileID: 8839843805000983434}
   - component: {fileID: -7973094888692819155}
   - component: {fileID: 4047295907932965893}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BlackSpoki
   m_TagString: Creature
   m_Icon: {fileID: 0}
@@ -933,6 +933,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CreatureStateView
   tickRate: 0.25
+  _2DCharacter: 0
   _beforeState: {fileID: 11400000, guid: 30c4113e382aa9047abd284f7e01087a, type: 2}
   _startState: {fileID: 11400000, guid: 30c4113e382aa9047abd284f7e01087a, type: 2}
   _currentState: {fileID: 11400000, guid: 4582dfbb91e3ab84fa34e6e74f809654, type: 2}

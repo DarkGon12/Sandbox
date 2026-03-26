@@ -21,7 +21,6 @@ namespace Sandbox
         {
             var bag = DisposableBag.CreateBuilder();
             _loadSceneEventSub.Subscribe(LoadSceneEvent).AddTo(bag);
-            bag.Add(_disposable);
             _disposable = bag.Build();
         }
 

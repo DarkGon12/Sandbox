@@ -36,7 +36,6 @@ namespace Creatures.UI
 
             var bag = DisposableBag.CreateBuilder();
             _showWindowEventSub.Subscribe(ShowWindowEvent).AddTo(bag);
-            bag.Add(_disposable);
             _disposable = bag.Build();
 
             _panelTargetPos = _spawnPanel.anchoredPosition;

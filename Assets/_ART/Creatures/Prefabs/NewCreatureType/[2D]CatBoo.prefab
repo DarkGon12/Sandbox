@@ -561,7 +561,7 @@ GameObject:
   - component: {fileID: 8931241146246827460}
   - component: {fileID: 1136172850440972889}
   - component: {fileID: 8883027845665846083}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: '[2D]CatBoo'
   m_TagString: Creature
   m_Icon: {fileID: 0}

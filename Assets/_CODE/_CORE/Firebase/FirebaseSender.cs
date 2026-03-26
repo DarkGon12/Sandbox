@@ -80,10 +80,7 @@ namespace Sandbox.Analyse
             FirebaseAnalytics.LogEvent(eventName);
         }
 
-        public static void LogEventCreature(
-            string eventName,
-            string creatureName,
-            CreaturesType creatureType)
+        public static void LogEventCreature(string eventName, string creatureName, CreaturesType creatureType)
         {
             if (!_firebaseInitialized)
             {
@@ -101,6 +98,22 @@ namespace Sandbox.Analyse
                 new Parameter("creature_name", creatureName),
                 new Parameter("creature_type", creatureType.ToString())
             );
+        }
+
+        public static void LogEventIAPManager(string eventName, string IAPIndex)
+        {
+            if (!_firebaseInitialized)
+            {
+                Debug.LogWarning($"[Firebase] LogEventCreature skipped (not initialized): {eventName}");
+                return;
+            }
+
+            Debug.Log(
+                $"[Firebase] LogEventCreature: {eventName}, " +
+                $"creature_name={IAPIndex}"
+            );
+
+            FirebaseAnalytics.LogEvent(eventName, new Parameter("creature_name", IAPIndex));
         }
     }
 }

@@ -502,7 +502,7 @@ GameObject:
   - component: {fileID: 1446532877651688956}
   - component: {fileID: 1509412181745977327}
   - component: {fileID: 6696251202125020993}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: '[2D]SunGay'
   m_TagString: Creature
   m_Icon: {fileID: 0}

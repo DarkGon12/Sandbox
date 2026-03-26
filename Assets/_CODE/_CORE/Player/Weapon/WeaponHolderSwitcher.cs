@@ -20,7 +20,6 @@ public class WeaponHolderSwitcher : MonoBehaviour
         _lastWeaponButton.OnDown += GetLastWeapon;
         var bag = DisposableBag.CreateBuilder();
         _selectedWeaponEventSub.Subscribe(SetWeapon).AddTo(bag);
-        bag.Add(_disposable);
         _disposable = bag.Build();
 
         _selectedWeapon = _weaponCollection[0];

@@ -5402,7 +5402,7 @@ GameObject:
   - component: {fileID: 96811234488441903}
   - component: {fileID: 379682966617466005}
   - component: {fileID: 242376222493754}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: '[2D]ChillGuy'
   m_TagString: Creature
   m_Icon: {fileID: 0}

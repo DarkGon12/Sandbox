@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 7873894053721640465}
   - component: {fileID: 6613910031181595685}
   - component: {fileID: 6988111106789251854}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: '[2D]SunChillGay'
   m_TagString: Creature
   m_Icon: {fileID: 0}

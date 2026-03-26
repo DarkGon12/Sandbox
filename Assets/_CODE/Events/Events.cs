@@ -1,5 +1,6 @@
 using Creatures;
 using Creatures.Navigation;
+using System;
 using UnityEngine;
 
 public class CreateCreatureEvent
@@ -59,4 +60,16 @@ public class CreatureVisibleEffect
 public class ChangePlayerTagEvent
 {
     public GameObject PlayerTarget;
+}
+
+public class IAPManagerSendEvent
+{
+    public string ProductName;
+}
+
+public class IAPManagerResultEvent
+{
+    public string ProductName;
+    public bool Success;
+    public string Message;
 }

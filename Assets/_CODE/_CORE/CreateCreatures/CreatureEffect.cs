@@ -23,7 +23,6 @@ namespace Creatures
         {
             var bag = DisposableBag.CreateBuilder();
             _creatureVisibleEffectEventSub.Subscribe(CanShowEffect).AddTo(bag);
-            bag.Add(_disposable);
             _disposable = bag.Build();
         }
 

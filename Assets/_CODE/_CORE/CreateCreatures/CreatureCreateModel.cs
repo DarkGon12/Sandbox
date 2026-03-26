@@ -46,7 +46,6 @@ namespace Creatures
             _createCreatureEventSub.Subscribe(InstantiateCreatureEvent).AddTo(bag);
             _creatureDeadEventSub.Subscribe(CreatureDeadEvent).AddTo(bag);
             _creatureRemoveAllEventSub.Subscribe(CreatureRemoveAllEvent).AddTo(bag);
-            bag.Add(_disposable);
             _disposable = bag.Build();
         }
 
@@ -96,9 +95,8 @@ namespace Creatures
 
         public void CreatureDeadEvent(CreatureDeadEvent evt)
         {
-            _creatureCollection.RemoveAll(x => x.Equals(evt.Creature));
+            _creatureCollection.RemoveAll(x => x == null || x == evt.Creature);
 
-            _creatureCollection.RemoveAll(x => x == null);
             UpdateInvisibleInterface();
         }
 

@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 9103978617837324123}
   - component: {fileID: 3517254399466333902}
   - component: {fileID: 8713155591210876993}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BlueCherv
   m_TagString: Creature
   m_Icon: {fileID: 0}

@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 4769734650207816275}
   - component: {fileID: 4863509963887141383}
   - component: {fileID: 102590077267639181}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: '[2D]TrollMan'
   m_TagString: Creature
   m_Icon: {fileID: 0}

@@ -5539,7 +5539,7 @@ GameObject:
   - component: {fileID: 8624236048704979976}
   - component: {fileID: 9115357345614237178}
   - component: {fileID: 7399758086722600348}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: '[2D]CatMem'
   m_TagString: Creature
   m_Icon: {fileID: 0}

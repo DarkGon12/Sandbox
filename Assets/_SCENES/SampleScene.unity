@@ -1369,6 +1369,10 @@ PrefabInstance:
       propertyPath: _bloodEffect
       value: 
       objectReference: {fileID: 428341761}
+    - target: {fileID: 5760289889916184958, guid: ff5f2e1d973b65e42a7ce37d67d47fef, type: 3}
+      propertyPath: _playerHealth_Text
+      value: 
+      objectReference: {fileID: 845994609}
     - target: {fileID: 5906016245858271703, guid: ff5f2e1d973b65e42a7ce37d67d47fef, type: 3}
       propertyPath: m_Name
       value: Player
@@ -6985,6 +6989,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &845994609 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9030402579036641778, guid: 89673070d6fb8364b9df68bc10e8f4b6, type: 3}
+  m_PrefabInstance: {fileID: 315591916}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &877710886
 PrefabInstance:
   m_ObjectHideFlags: 0

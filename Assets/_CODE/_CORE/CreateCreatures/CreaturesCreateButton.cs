@@ -89,7 +89,7 @@ namespace Creatures.UI
             _showInterAdEventPub.Publish(new() { });
             _showWindowEventPub.Publish(new() { IsShow = false });
 
-            FirebaseSender.LogEventCreature("User select card", 
+            FirebaseSender.LogEventCreature("User_select_card", 
                 _creatureData.GetUIInfo.CreatureName, _creatureData.GetCreatureType);
         }
 
@@ -105,7 +105,7 @@ namespace Creatures.UI
             _showInterAdEventPub.Publish(new() { });
             _showWindowEventPub.Publish(new() { IsShow = false });
 
-            FirebaseSender.LogEventCreature("User select weapon",
+            FirebaseSender.LogEventCreature("User_select_weapon",
     _creatureData.GetUIInfo.CreatureName, _creatureData.GetCreatureType);
         }
 
@@ -119,7 +119,7 @@ namespace Creatures.UI
 
             _loadSceneEventPub.Publish(new() { SceneName = _sceneName });
 
-            FirebaseSender.LogEventCreature("User select map",
+            FirebaseSender.LogEventCreature("User_select_map",
     _creatureData.GetUIInfo.CreatureName, _creatureData.GetCreatureType);
         }
     }

@@ -28,6 +28,8 @@ public class AutoTurretSensor : MonoBehaviour
     [SerializeField] private float _projectileSpeed = 30f;
     [SerializeField] private float _fireAngleTolerance = 6f;
 
+    [SerializeField] private AudioClip _fireClip;
+
     private AutoTurretInformation _turretInfo;
     private CreatureInformation _currentTargetInfo;
     private Transform _currentTargetBone;
@@ -35,9 +37,12 @@ public class AutoTurretSensor : MonoBehaviour
     private float _nextScanTime;
     private float _nextFireTime;
 
+    private AudioSource _audioSource;
+
     private void Awake()
     {
         _turretInfo = GetComponentInParent<AutoTurretInformation>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -245,6 +250,8 @@ public class AutoTurretSensor : MonoBehaviour
             _projectilePrefab,
             _muzzlePoint.position,
             _muzzlePoint.rotation);
+
+        _audioSource.PlayOneShot(_fireClip);
 
         projectile.Init(_muzzlePoint, _turretInfo.Damage, _projectileSpeed);
     }

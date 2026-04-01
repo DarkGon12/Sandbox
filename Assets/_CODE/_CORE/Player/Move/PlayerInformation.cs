@@ -1,6 +1,7 @@
 using DG.Tweening;
 using MessagePipe;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -16,6 +17,7 @@ namespace Sandbox.Player
 
         [Header("Health")]
         [SerializeField] private int _playerHealth = 200;
+        [SerializeField] private TextMeshProUGUI _playerHealth_Text;
 
         [Header("Timings")]
         [SerializeField] private float _bloodFadeIn = 0.15f;
@@ -44,6 +46,7 @@ namespace Sandbox.Player
                 return;
 
             _playerHealth -= damage;
+            _playerHealth_Text.text = _playerHealth.ToString();
 
             PlayBloodEffect();
 

@@ -101,6 +101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 849879618532680022}
   - component: {fileID: 2799253375957610523}
+  - component: {fileID: 100063288191573973}
   m_Layer: 0
   m_Name: IAP
   m_TagString: Untagged
@@ -135,6 +136,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f25356cbb97d7a44ebd47251ed79da07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IAPManager
+--- !u!114 &100063288191573973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5126798976361403138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34b30f82640c20f468ade506bf65697e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InAppReviewManager
+  countOnlyWhenPlaying: 1
+  gameplayActive: 1
+  minSecondsBeforeAsk: 60
+  maxSecondsBeforeAsk: 180
+  askOnlyOnceEver: 1
 --- !u!1 &5536812082722936153
 GameObject:
   m_ObjectHideFlags: 0

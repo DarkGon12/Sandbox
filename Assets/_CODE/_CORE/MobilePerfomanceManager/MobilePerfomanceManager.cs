@@ -28,6 +28,7 @@ public class MobilePerfomanceManager : MonoBehaviour
     {
         Application.targetFrameRate = 60;
         QualitySettings.vSyncCount = 0;
+        Application.backgroundLoadingPriority = ThreadPriority.Low; // Help prevent ANR during pause
     }
 
     void Update()

@@ -17,3 +17,13 @@ MonoBehaviour:
     ProductType: 1
   - ProductId: entyti_portable_turret
     ProductType: 1
+  - ProductId: character_ai
+    ProductType: 1
+  - ProductId: character_zombie_girl
+    ProductType: 1
+  - ProductId: character_fumiko
+    ProductType: 1
+  - ProductId: character_riko
+    ProductType: 1
+  - ProductId: character_emika
+    ProductType: 1

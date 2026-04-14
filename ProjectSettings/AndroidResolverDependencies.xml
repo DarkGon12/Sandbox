@@ -2,6 +2,10 @@
   <packages>
     <package>androidx.constraintlayout:constraintlayout:2.1.4</package>
     <package>androidx.lifecycle:lifecycle-process:2.6.2</package>
+    <package>com.android.installreferrer:installreferrer:2.1</package>
+    <package>com.appsflyer:af-android-sdk:6.17.6</package>
+    <package>com.appsflyer:purchase-connector:2.2.0</package>
+    <package>com.appsflyer:unity-wrapper:6.17.91</package>
     <package>com.google.ads.mediation:facebook:6.20.0.0</package>
     <package>com.google.ads.mediation:fyber:8.3.8.0</package>
     <package>com.google.ads.mediation:inmobi:10.8.3.1</package>

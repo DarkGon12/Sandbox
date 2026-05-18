@@ -36,6 +36,7 @@ public class CarEnterModel : MonoBehaviour
             if (hit.collider.gameObject.tag == "Car")
             {
                 _enterButton.gameObject.SetActive(true);
+                _exitButton.gameObject.SetActive(false);
             }
             else
             {

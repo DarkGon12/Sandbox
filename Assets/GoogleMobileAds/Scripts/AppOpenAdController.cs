@@ -40,6 +40,7 @@ public class AppOpenAdController : MonoBehaviour
 
                     _appOpenAd = ad;
                     Debug.Log("[Ads][AppOpen] Loaded");
+                    RegisterCallbacks(_appOpenAd);
                 }
             );
     }
@@ -71,5 +72,18 @@ public class AppOpenAdController : MonoBehaviour
         };
 
         _appOpenAd.Show();
+    }
+
+    private void RegisterCallbacks(AppOpenAd _appOpenAd)
+    {
+        _appOpenAd.OnAdPaid += adValue =>
+        {
+            AppsFlyerSender.LogAdRevenueToAppsFlyer(
+                adValue,
+                "AppOpen",
+                "app_start",
+                AdUnitId
+            );
+        };
     }
 }

@@ -1,6 +1,8 @@
-using System;
-using UnityEngine;
+using AppsFlyerSDK;
 using GoogleMobileAds.Api;
+using System;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class RewardedAdService : MonoBehaviour
 {
@@ -87,6 +89,16 @@ public class RewardedAdService : MonoBehaviour
         {
             Debug.LogError("[Ads] Rewarded failed to show: " + error);
             LoadAd();
+        };
+
+        _rewardedAd.OnAdPaid += adValue =>
+        {
+            AppsFlyerSender.LogAdRevenueToAppsFlyer(
+                adValue,
+                "Rewarded",
+                "game_reward",
+                AdUnitId
+            );
         };
     }
 }

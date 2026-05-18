@@ -41,7 +41,8 @@ namespace Sandbox.Tank
             {
                 if (hit.collider.gameObject.tag == "Tank")
                 {
-                    _enterButton.gameObject.SetActive(true);
+                    _enterButton.gameObject.SetActive(true); 
+                    _exitButton.gameObject.SetActive(false);
                 }
                 else
                 {

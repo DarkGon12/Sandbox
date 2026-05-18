@@ -72,5 +72,14 @@ public class InterstitialAdController
             Debug.Log("Interstitial ad full screen content closed.");
             AdClose?.Invoke();
         };
+        ad.OnAdPaid += adValue =>
+        {
+            AppsFlyerSender.LogAdRevenueToAppsFlyer(
+                adValue,
+                "Interstitial",
+                "game_interstitial",
+                AdUnitId
+            );
+        };
     }
 }

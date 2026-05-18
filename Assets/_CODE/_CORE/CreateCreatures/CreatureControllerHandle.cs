@@ -64,6 +64,9 @@ namespace Creatures.Control
 
         private void TryDetectCreature()
         {
+            if (!_mainCam.gameObject.activeSelf)
+                return;
+
             _currentCreature = null;
 
             if (!Physics.Raycast(

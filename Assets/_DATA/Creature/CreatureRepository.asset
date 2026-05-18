@@ -14,16 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Creatures.CreaturesRepository
   CreaturesCollection:
   - {fileID: 11400000, guid: 5ffff2b3bf0a7f746be3541bf95fd4f8, type: 2}
-  - {fileID: 11400000, guid: 28f36c1d288a967458a0cc217c239fc9, type: 2}
-  - {fileID: 11400000, guid: ecf1d69af0e96b6479770b7857ccbc2b, type: 2}
-  - {fileID: 11400000, guid: b66a0e4b36685754985c34bba066a7cf, type: 2}
   - {fileID: 11400000, guid: 7be49d21c706861459e6ec39aed7d489, type: 2}
   - {fileID: 11400000, guid: 454b0e3d5f95e5d4abd13b24f6276592, type: 2}
   - {fileID: 11400000, guid: ffd721065737bcf4895118ed422d1004, type: 2}
   - {fileID: 11400000, guid: 511e0a0cacb3d054e960fcae3c383684, type: 2}
   - {fileID: 11400000, guid: 1fb0cd61f1196924c8a536bde7382050, type: 2}
   - {fileID: 11400000, guid: d29737125e211594ab9de488fa9f9cad, type: 2}
-  - {fileID: 11400000, guid: efb412b35b77fff4dab75b2a040c80fa, type: 2}
   - {fileID: 11400000, guid: 1a5208f7a6cc6fc489dc9900b60466e6, type: 2}
   - {fileID: 11400000, guid: 92df73b3e45065a4d81d9de54eb539a8, type: 2}
   - {fileID: 11400000, guid: 4b3340f4e23ee114f930842d090b13d1, type: 2}
@@ -40,7 +36,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8bb5004f8a1ad634cae11b138f71d4ae, type: 2}
   - {fileID: 11400000, guid: 1d1f03865843e0e45970d2d3c99d4845, type: 2}
   - {fileID: 11400000, guid: 9743bb2372709a84988cfc104e9e0f9d, type: 2}
-  - {fileID: 11400000, guid: e79f14c7ba2fdd94b872f69c87134711, type: 2}
   - {fileID: 11400000, guid: 295530f357abfeb41b76bb6c46761bcd, type: 2}
   - {fileID: 11400000, guid: 67597d9383283af45b3ea40e961fe330, type: 2}
   - {fileID: 11400000, guid: 34bfdb3fccbcb48408619b2bddb3927f, type: 2}

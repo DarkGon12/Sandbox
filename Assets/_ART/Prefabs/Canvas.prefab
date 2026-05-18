@@ -10677,12 +10677,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96f4a931a9ce79499a6e06721cf3883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MobilePerfomanceManager
-  _maxEntities: 100
+  _maxEntities: 70
   _maxCreatures: 50
   minEntities: 30
-  maxEntities: 300
+  maxEntities: 70
   minCreatures: 10
-  maxCreatures: 150
+  maxCreatures: 60
   checkInterval: 2
   lowFPSThreshold: 40
   highFPSThreshold: 55

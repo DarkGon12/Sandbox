@@ -43,6 +43,7 @@ namespace Sandbox.Helicoper
                 if (hit.collider.gameObject.tag == "Helicopter")
                 {
                     _enterButton.gameObject.SetActive(true);
+                    _exitButton.gameObject.SetActive(false);
                 }
                 else
                 {

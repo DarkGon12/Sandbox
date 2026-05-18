@@ -67,6 +67,8 @@ namespace Sandbox.Helicopter
         private Transform _player;
         private Camera _mainCam;
 
+        private bool _inHelicopter;
+
         // ================= ENGINE =================
 
         private void Start()
@@ -113,6 +115,8 @@ namespace Sandbox.Helicopter
                 _player.SetParent(null);
                 _player.position = _exitPoint.position;
             }
+
+            _inHelicopter = isEnter;
         }
 
         [ContextMenu("EngineOn")]
@@ -314,6 +318,16 @@ namespace Sandbox.Helicopter
             }
 
             _rb.linearVelocity = v;
+        }
+
+        private void OnDestroy()
+        {
+            if (_player == null)
+                return;
+            if (!_inHelicopter)
+                return;
+
+            SeatInHelicopter(false, _player);
         }
     }
 }

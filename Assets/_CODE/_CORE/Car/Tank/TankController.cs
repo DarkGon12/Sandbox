@@ -183,5 +183,15 @@ namespace Sandbox.Tank
                 _rigidbody.linearVelocity = new Vector3(limited.x, v.y, limited.z);
             }
         }
+
+        private void OnDestroy()
+        {
+            if (_player == null)
+                return;
+            if (!_playerSeat)
+                return;
+
+            SeatInTank(false, _player);
+        }
     }
 }

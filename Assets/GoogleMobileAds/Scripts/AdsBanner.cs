@@ -30,10 +30,12 @@ public class AdsBanner
 
         AdRequest request = new AdRequest();
         _bannerView.LoadAd(request);
-        _bannerView.OnBannerAdLoaded += () => 
-        { 
-            _bannerView.Show(); 
-        };     
+        _bannerView.OnBannerAdLoaded += () =>
+        {
+            _bannerView.Show();
+        };
+
+        RegisterCallbacks(_bannerView);
     }
 
     public void ShowBanner(bool state)
@@ -49,4 +51,18 @@ public class AdsBanner
         _bannerView?.Destroy();
         _bannerView = null;
     }
+
+    private void RegisterCallbacks(BannerView _bannerView)
+    {
+        _bannerView.OnAdPaid += adValue =>
+        {
+            AppsFlyerSender.LogAdRevenueToAppsFlyer(
+                adValue,
+                "Banner",
+                "bottom_banner",
+                AdUnitId
+            );
+        };
+    }
 }
+

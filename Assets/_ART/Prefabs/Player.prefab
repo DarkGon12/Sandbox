@@ -54345,7 +54345,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 250
+  far clip plane: 150
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -74042,6 +74042,7 @@ MonoBehaviour:
   _deadEffect: {fileID: 0}
   _bloodEffect: {fileID: 0}
   _playerHealth: 200
+  _playerHealth_Text: {fileID: 0}
   _bloodFadeIn: 0.01
   _bloodFadeOut: 0.5
   _deadFadeIn: 1.2
@@ -76465,6 +76466,7 @@ MonoBehaviour:
   _creatureIconInToolGun: {fileID: 4134474748916304041}
   _shootToolGun: {fileID: 0}
   _motion: {fileID: 20784474774276662}
+  _perfomanceManager: {fileID: 0}
   _agrroButton: {fileID: 0}
   _agrroPlayerButton: {fileID: 0}
   _creatureRemoveAllButton: {fileID: 0}

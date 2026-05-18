@@ -25,6 +25,7 @@ public class CarController : MonoBehaviour
     private Transform _player;
 
     private bool _carInit;
+    private bool _inCar;
 
     private void Awake()
     {
@@ -83,6 +84,7 @@ public class CarController : MonoBehaviour
         _driveTrain.enabled = isEnter;
         _antiRoll.enabled = isEnter;
         _audio.enabled = isEnter;
+        _inCar = isEnter;
     }
 
     private void Update()
@@ -114,5 +116,14 @@ public class CarController : MonoBehaviour
             ragdoll.EnableRagdoll();
             ragdoll.DisableRagdoll();
         }
+    }
+    private void OnDestroy()
+    {
+        if (_player == null)
+            return;
+        if (!_inCar)
+            return;
+
+        SeatInCar(false, _player);
     }
 }

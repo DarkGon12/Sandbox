@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class MobilePerfomanceManager : MonoBehaviour
 {
@@ -24,8 +25,11 @@ public class MobilePerfomanceManager : MonoBehaviour
     private int frameCounter;
     private float fps;
 
+    private UniversalRenderPipelineAsset urpAsset;
+
     void Start()
     {
+        urpAsset = (UniversalRenderPipelineAsset)QualitySettings.renderPipeline;
         Application.targetFrameRate = 60;
         QualitySettings.vSyncCount = 0;
         Application.backgroundLoadingPriority = ThreadPriority.Low; // Help prevent ANR during pause
@@ -74,6 +78,13 @@ public class MobilePerfomanceManager : MonoBehaviour
 
         _maxCreatures = Mathf.Clamp(_maxCreatures, minCreatures, maxCreatures);
         _maxEntities = Mathf.Clamp(_maxEntities, minEntities, maxEntities);
+
+        SetShadows(0);
+    }    
+
+    public void SetShadows(float distance)
+    {
+        urpAsset.shadowDistance = distance;
     }
 
     void IncreaseLoad()
@@ -83,6 +94,8 @@ public class MobilePerfomanceManager : MonoBehaviour
 
         _maxCreatures = Mathf.Clamp(_maxCreatures, minCreatures, maxCreatures);
         _maxEntities = Mathf.Clamp(_maxEntities, minEntities, maxEntities);
+
+        SetShadows(50);
     }
 
     public float GetFPS()

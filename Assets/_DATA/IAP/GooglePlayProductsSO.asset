@@ -27,3 +27,7 @@ MonoBehaviour:
     ProductType: 1
   - ProductId: character_emika
     ProductType: 1
+  - ProductId: character_penguingirl
+    ProductType: 1
+  - ProductId: character_banano
+    ProductType: 1

@@ -17013,6 +17013,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 366631939}
+    - target: {fileID: 1070137742336806653, guid: 89673070d6fb8364b9df68bc10e8f4b6, type: 3}
+      propertyPath: _weaponHolderSwitcher
+      value: 
+      objectReference: {fileID: 366631942}
     - target: {fileID: 2776545975111744223, guid: 89673070d6fb8364b9df68bc10e8f4b6, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -19132,6 +19136,10 @@ PrefabInstance:
       propertyPath: '_playerControllUI.Array.data[4]'
       value: 
       objectReference: {fileID: 315591940}
+    - target: {fileID: 434518413526089750, guid: ff5f2e1d973b65e42a7ce37d67d47fef, type: 3}
+      propertyPath: '_playerControllUI.Array.data[5]'
+      value: 
+      objectReference: {fileID: 695888590}
     - target: {fileID: 722778406010855908, guid: ff5f2e1d973b65e42a7ce37d67d47fef, type: 3}
       propertyPath: _startFire
       value: 
@@ -19232,10 +19240,18 @@ PrefabInstance:
       propertyPath: '_playerControllUI.Array.data[3]'
       value: 
       objectReference: {fileID: 315591940}
+    - target: {fileID: 3667762715670276136, guid: ff5f2e1d973b65e42a7ce37d67d47fef, type: 3}
+      propertyPath: '_playerControllUI.Array.data[4]'
+      value: 
+      objectReference: {fileID: 695888590}
     - target: {fileID: 3934217365513675313, guid: ff5f2e1d973b65e42a7ce37d67d47fef, type: 3}
       propertyPath: _fireButton
       value: 
       objectReference: {fileID: 315591919}
+    - target: {fileID: 4143395353382576412, guid: ff5f2e1d973b65e42a7ce37d67d47fef, type: 3}
+      propertyPath: _kickButton
+      value: 
+      objectReference: {fileID: 695888589}
     - target: {fileID: 5328008276696438474, guid: ff5f2e1d973b65e42a7ce37d67d47fef, type: 3}
       propertyPath: _fireButton
       value: 
@@ -19272,6 +19288,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6935280423952004211, guid: ff5f2e1d973b65e42a7ce37d67d47fef, type: 3}
+      propertyPath: _fireButton
+      value: 
+      objectReference: {fileID: 315591919}
     - target: {fileID: 6957785821341151008, guid: ff5f2e1d973b65e42a7ce37d67d47fef, type: 3}
       propertyPath: _exitButton
       value: 
@@ -19324,6 +19344,10 @@ PrefabInstance:
       propertyPath: '_playerControllUI.Array.data[4]'
       value: 
       objectReference: {fileID: 315591940}
+    - target: {fileID: 6957785821341151008, guid: ff5f2e1d973b65e42a7ce37d67d47fef, type: 3}
+      propertyPath: '_playerControllUI.Array.data[5]'
+      value: 
+      objectReference: {fileID: 695888590}
     - target: {fileID: 7665660025294083610, guid: ff5f2e1d973b65e42a7ce37d67d47fef, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.41
@@ -19369,6 +19393,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 315591917}
     - target: {fileID: 8383273691531856799, guid: ff5f2e1d973b65e42a7ce37d67d47fef, type: 3}
+      propertyPath: _fireButton
+      value: 
+      objectReference: {fileID: 315591919}
+    - target: {fileID: 8573084652927918793, guid: ff5f2e1d973b65e42a7ce37d67d47fef, type: 3}
       propertyPath: _fireButton
       value: 
       objectReference: {fileID: 315591919}
@@ -32697,6 +32725,22 @@ Transform:
   - {fileID: 1479657029}
   m_Father: {fileID: 299394424}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &695888589 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1791061030382463165, guid: 89673070d6fb8364b9df68bc10e8f4b6, type: 3}
+  m_PrefabInstance: {fileID: 315591916}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695888590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1 &695888590 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7672772330086112, guid: 89673070d6fb8364b9df68bc10e8f4b6, type: 3}
+  m_PrefabInstance: {fileID: 315591916}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &696159737
 GameObject:
   m_ObjectHideFlags: 0

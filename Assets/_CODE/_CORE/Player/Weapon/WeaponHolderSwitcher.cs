@@ -8,6 +8,7 @@ public class WeaponHolderSwitcher : MonoBehaviour
 {
     [SerializeField] private List<GameObject> _weaponCollection = new List<GameObject>();
     [SerializeField] private CarControlButton _lastWeaponButton;
+    [SerializeField] private int _held = 10; // планшет
 
     [Inject] private ISubscriber<SelectedWeaponEvent> _selectedWeaponEventSub;
 
@@ -23,6 +24,19 @@ public class WeaponHolderSwitcher : MonoBehaviour
         _disposable = bag.Build();
 
         _selectedWeapon = _weaponCollection[0];
+    }
+
+    public void ShowHeld(bool action) // показать планшет
+    {
+        if (action)
+        {
+            _selectedWeapon.SetActive(false);
+            _weaponCollection[_held].SetActive(true);
+        }
+        else
+        {
+            _weaponCollection[_held].SetActive(false);
+        }
     }
 
     public void SetWeapon(SelectedWeaponEvent evt)

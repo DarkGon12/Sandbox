@@ -30,6 +30,8 @@ namespace Sandbox.Weapon
 
         private Coroutine _reloadCoroutine;
 
+        public bool IsReloading => _isReloading;
+
         private void Start()
         {
             _audioSource = GetComponent<AudioSource>();
@@ -137,7 +139,9 @@ namespace Sandbox.Weapon
             _currentAmmo--;
 
             _weaponMotion?.PlayShoot();
-            _audioSource.PlayOneShot(_shootClip);
+
+            if (_shootClip != null)
+                _audioSource.PlayOneShot(_shootClip);
 
             GameObject bulletObj = ObjectPoolManager.Get(_weaponData.BulletPoolTag);
 
@@ -154,7 +158,8 @@ namespace Sandbox.Weapon
 
             if (!bulletObj.activeInHierarchy)
                 bulletObj.SetActive(true);
-            _muzzleParticle.Play();
+            if (_muzzleParticle != null)
+                _muzzleParticle.Play();
 
             WeaponBullet bullet = bulletObj.GetComponent<WeaponBullet>();
             bullet.Init(

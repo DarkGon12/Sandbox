@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using Zenject;
 using MessagePipe;
+using System.Collections;
 
 namespace Creatures.UI
 {
@@ -17,10 +18,13 @@ namespace Creatures.UI
         [Header("Animation")]
         [SerializeField] private float _duration = 0.4f;
         [SerializeField] private Ease _ease = Ease.OutBack;
+        [SerializeField] private float _showDelay;
 
         private bool _firstTap = true;
         private Vector2 _panelTargetPos;
         private Vector3 _panelTargetScale;
+
+        [SerializeField] private WeaponHolderSwitcher _weaponHolderSwitcher;
 
         [SerializeField] private Button _creaturesShowWindowBtn;
         [SerializeField] private Button _creaturesHideWindowBtn;
@@ -55,21 +59,7 @@ namespace Creatures.UI
 
         public void OpenPanel()
         {
-            if (_firstTap)
-            {
-                _firstTap = false;
-                _arrowTutorial.NextStep();
-            }
-
-            _spawnPanel.gameObject.SetActive(true);
-
-            _spawnPanel.anchoredPosition = _spawnButton.anchoredPosition;
-            _spawnPanel.localScale = Vector3.zero;
-
-            Sequence seq = DOTween.Sequence();
-
-            seq.Join(_spawnPanel.DOScale(_panelTargetScale, _duration).SetEase(_ease));
-            seq.Join(_spawnPanel.DOAnchorPos(_panelTargetPos, _duration).SetEase(Ease.OutCubic));
+            StartCoroutine(ShowDelay());
         }
 
         public void ClosePanel()
@@ -86,5 +76,30 @@ namespace Creatures.UI
         }
 
         private void OnDestroy() => _disposable?.Dispose();
+
+        private IEnumerator ShowDelay()
+        {
+            _weaponHolderSwitcher.ShowHeld(true);
+            yield return new WaitForSeconds(_showDelay);
+
+            if (_firstTap)
+            {
+                _firstTap = false;
+                _arrowTutorial.NextStep();
+            }
+
+            _spawnPanel.gameObject.SetActive(true);
+
+            _spawnPanel.anchoredPosition = _spawnButton.anchoredPosition;
+            _spawnPanel.localScale = Vector3.zero;
+
+            Sequence seq = DOTween.Sequence();
+
+            seq.Join(_spawnPanel.DOScale(_panelTargetScale, _duration).SetEase(_ease));
+            seq.Join(_spawnPanel.DOAnchorPos(_panelTargetPos, _duration).SetEase(Ease.OutCubic));
+            
+            _weaponHolderSwitcher.ShowHeld(false);
+            _weaponHolderSwitcher.SetWeapon(0);
+        }
     }
 }

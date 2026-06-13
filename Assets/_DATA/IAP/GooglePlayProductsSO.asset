@@ -31,3 +31,5 @@ MonoBehaviour:
     ProductType: 1
   - ProductId: character_banano
     ProductType: 1
+  - ProductId: character_banano
+    ProductType: 1

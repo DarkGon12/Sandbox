@@ -41,6 +41,8 @@ namespace Installers
 
             Container.BindMessageBroker<IAPManagerSendEvent>(options);
             Container.BindMessageBroker<IAPManagerResultEvent>(options);
+
+            Container.BindMessageBroker<SelectMaterialPaintEvent>(options);
         }
     }
 }

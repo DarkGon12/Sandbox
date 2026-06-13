@@ -80,6 +80,16 @@ public class InAppReviewManager : MonoBehaviour
         }
     }
 
+    [ContextMenu("Force Request Review")]
+    public void ForceRequestReview()
+    {
+        if (isRequestInProgress)
+            return;
+
+        hasAskedThisSession = true;
+        StartCoroutine(RequestReviewCoroutine());
+    }
+
     /// <summary>
     /// Call this method only if need stop/start real gameplay
     /// </summary>

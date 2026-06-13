@@ -73,3 +73,10 @@ public class IAPManagerResultEvent
     public bool Success;
     public string Message;
 }
+
+// Events for map editor
+
+public class SelectMaterialPaintEvent
+{
+    public int MaterialIndex;
+}

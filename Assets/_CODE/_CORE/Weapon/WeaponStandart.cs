@@ -28,9 +28,16 @@ namespace Sandbox.Weapon
         private EventTrigger.Entry _downEntry;
         private EventTrigger.Entry _upEntry;
 
+        private AmmoDefinition _ammoDefinition;
+
         private Coroutine _reloadCoroutine;
 
         public bool IsReloading => _isReloading;
+
+        private void Awake()
+        {
+            _ammoDefinition = FindAnyObjectByType<AmmoDefinition>(FindObjectsInactive.Include);
+        }
 
         private void Start()
         {
@@ -48,10 +55,13 @@ namespace Sandbox.Weapon
         private void OnEnable()
         {
             SetupButton();
+            _ammoDefinition.ShowUI(true);
+            _ammoDefinition.UpdateUI(_weaponData.MagazineSize, _weaponData.MagazineSize);
         }
 
         private void OnDisable()
         {
+            _ammoDefinition.ShowUI(false);
             RemoveButtonListeners();
 
             if (_reloadCoroutine != null)
@@ -137,6 +147,7 @@ namespace Sandbox.Weapon
             }
 
             _currentAmmo--;
+            _ammoDefinition.UpdateUI(_currentAmmo, _weaponData.MagazineSize);
 
             _weaponMotion?.PlayShoot();
 
@@ -195,6 +206,8 @@ namespace Sandbox.Weapon
             _currentAmmo = _weaponData.MagazineSize;
             _isReloading = false;
             _reloadCoroutine = null;
+
+            _ammoDefinition.UpdateUI(_currentAmmo, _weaponData.MagazineSize);
         }
     }
 }

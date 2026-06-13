@@ -39,4 +39,12 @@ public class CheatPanels : MonoBehaviour
     {
         _creatureVisibleEffectEventPub.Publish(new() { IsShow = state });
     }
+
+    public void RateUs(int state)
+    {
+        if (state == 0)
+            InAppReviewManager.Instance.ResetReviewState();
+        if (state == 1)
+            InAppReviewManager.Instance.ForceRequestReview();
+    }
 }

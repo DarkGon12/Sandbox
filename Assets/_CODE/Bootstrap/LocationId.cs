@@ -5,6 +5,7 @@ namespace Zone.Menu
         None = 0,
         LoadingScene = 1,
         Voxel_map = 2,
-        SampleScene = 3
+        SampleScene = 3,
+        GameScene = 4
     }
 }

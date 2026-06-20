@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 119b06946b2aea04da6d480c4551dff2, type: 3}
+  m_Name: _CreatureRangedCombatSettings
+  m_EditorClassIdentifier: Assembly-CSharp::Creatures.Navigation.CreatureRangedCombatSettings
+  _desiredDistance: 8
+  _distanceTolerance: 1
+  _attackRange: 14
+  _retreatStepDistance: 4
+  _coverSearchRadius: 12
+  _minBehindCoverDot: 0.35
+  _coverRecheckInterval: 2
+  _enemyRelocationDistance: 4
+  _slotDistanceWeight: 1
+  _desiredDistanceWeight: 0.6
+  _navMeshSampleRadius: 0.7
+  _navMeshAreaMask: -1
+  _requireCompletePath: 1
+  _arrivalDistance: 0.45
+  _destinationRefreshInterval: 0.25
+  _shotsPerBurst: 4
+  _randomizeShotsPerAttack: 1
+  _minShotsPerAttack: 2
+  _maxShotsPerAttack: 10
+  _shotInterval: 0.25
+  _burstCooldown: 1
+  _coverShotsPerPeek: 4
+  _coverExposeDuration: 0.35
+  _coverFireWindow: 0.35
+  _coverHideDuration: 0.3
+  _coverHiddenPause: 0.4
+  _rotationSpeed: 90
+  _targetAimHeight: 1.1
+  _lineOfSightBlockMask:
+    serializedVersion: 2
+    m_Bits: 65
+  _standingCoverFireHeight: 1.35
+  _standingCoverSideSearchDistance: 3
+  _standingCoverSideSearchStep: 0.35
+  _standingCoverBackOffset: 0.15
+  _idleBool: idle
+  _walkBool: walk
+  _openAttackTrigger: attack
+  _inCoverBool: inCover
+  _coverStanceInt: coverStance
+  _coverSideInt: coverSide
+  _coverAnimations:
+    standingLeft:
+      showState: coverStandLeftShow
+      fireState: coverStandLeftFire
+      hideState: coverStandLeftHide
+    standingRight:
+      showState: coverStandRightShow
+      fireState: coverStandRightFire
+      hideState: coverStandRightHide
+    crouchingLeft:
+      showState: coverCrouchLeftShow
+      fireState: attack
+      hideState: coverCrouchLeftHide
+    crouchingRight:
+      showState: coverCrouchRightShow
+      fireState: attack
+      hideState: coverCrouchRightHide
+  _animationCrossFadeTime: 0.08

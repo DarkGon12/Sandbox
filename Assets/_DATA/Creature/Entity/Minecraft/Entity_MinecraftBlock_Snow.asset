@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3806fda8b6acdcc4dbe5f927b1338b78, type: 3}
+  m_Name: Entity_MinecraftBlock_Snow
+  m_EditorClassIdentifier: Assembly-CSharp::Creatures.CreaturesData
+  _creatureType: 1
+  _instanceObject: {fileID: 313617074592007977, guid: 795f1c16c9501a8469c0ca5e41dd0a1c, type: 3}
+  _weaponIndex: 0
+  _creatureName: Snow block
+  _mapIndex: 
+  _creatureStats:
+    MoveSpeed: 0
+    AttackPower: 0
+  _creatureUI:
+    CreatureIcon: {fileID: 21300000, guid: 699443e46ed63fd4bb474f1254807071, type: 3}
+    CreaturePrice: 
+    CreatureName: Snow block
+    CanViewRewardedAd: 0

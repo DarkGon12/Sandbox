@@ -64,9 +64,11 @@ namespace Sandbox.Weapon
                         collision.contacts[0].point,
                         collision.contacts[0].normal
                     );
-                collision.transform.root
-                    .GetComponent<CreatureStateView>()
-                    .SetState(_attackPlayerState);
+
+                CreatureStateView stateView = collision.transform.root.GetComponent<CreatureStateView>();
+                CreatureState aggroState = GetAggroState(collision.transform.root);
+                if (stateView != null && aggroState != null)
+                    stateView.SetState(aggroState);
             }
 
             ReturnToPool();
@@ -76,6 +78,22 @@ namespace Sandbox.Weapon
         {
             StopAllCoroutines();
             ObjectPoolManager.Return(_poolTag, gameObject);
+        }
+
+        private CreatureState GetAggroState(Transform targetRoot)
+        {
+            if (targetRoot == null)
+                return _attackPlayerState;
+
+            if (targetRoot.GetComponent<CreatureRangedWeapon>() == null)
+                return _attackPlayerState;
+
+            CreatureEnemySensor sensor = targetRoot.GetComponent<CreatureEnemySensor>();
+            if (sensor == null || sensor.AttackState == null)
+                return _attackPlayerState;
+
+            sensor.SetPlayerTarget();
+            return sensor.AttackState;
         }
     }
 }

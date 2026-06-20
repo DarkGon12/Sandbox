@@ -14056,7 +14056,7 @@ MonoBehaviour:
   _2DCharacter: 0
   _beforeState: {fileID: 11400000, guid: 30c4113e382aa9047abd284f7e01087a, type: 2}
   _startState: {fileID: 11400000, guid: 30c4113e382aa9047abd284f7e01087a, type: 2}
-  _currentState: {fileID: 11400000, guid: 4582dfbb91e3ab84fa34e6e74f809654, type: 2}
+  _currentState: {fileID: 11400000, guid: 30c4113e382aa9047abd284f7e01087a, type: 2}
   _ragdollDead: {fileID: 80512327076316413, guid: 7bf2f29c9795a4b4cb675c6d9b3005ea, type: 3}
   _colliders:
   - {fileID: 2120187068522692904}
@@ -14141,7 +14141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a20e50a22c8c1a24693c3491fa5285ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Creatures.Navigation.CreatureEnemySensor
-  _attackState: {fileID: 11400000, guid: 13f3a8bdf2ecea444ba76ae6b114b707, type: 2}
+  _attackState: {fileID: 11400000, guid: 791e64e62fb935144b746285fe671174, type: 2}
 --- !u!114 &4972570102394617878
 MonoBehaviour:
   m_ObjectHideFlags: 0

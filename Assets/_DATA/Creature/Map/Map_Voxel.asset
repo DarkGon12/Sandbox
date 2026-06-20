@@ -21,7 +21,7 @@ MonoBehaviour:
     MoveSpeed: 0
     AttackPower: 0
   _creatureUI:
-    CreatureIcon: {fileID: 1582342089, guid: 8eafb01e280aafa4da80b0f9d9597649, type: 3}
+    CreatureIcon: {fileID: 258001766, guid: f2634a66a19f79744bae505339c6bae7, type: 3}
     CreaturePrice: 
     CreatureName: Voxel Map
     CanViewRewardedAd: 0

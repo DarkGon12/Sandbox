@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3806fda8b6acdcc4dbe5f927b1338b78, type: 3}
+  m_Name: Entity_MinecraftBlock_Grass
+  m_EditorClassIdentifier: Assembly-CSharp::Creatures.CreaturesData
+  _creatureType: 1
+  _instanceObject: {fileID: 7347530727245164872, guid: e76fe284623040e4486deb4423267c73, type: 3}
+  _weaponIndex: 0
+  _creatureName: Grass block
+  _mapIndex: 
+  _creatureStats:
+    MoveSpeed: 0
+    AttackPower: 0
+  _creatureUI:
+    CreatureIcon: {fileID: 21300000, guid: 786c350ce48572f409ad74e24e3e8fad, type: 3}
+    CreaturePrice: 
+    CreatureName: Grass block
+    CanViewRewardedAd: 0

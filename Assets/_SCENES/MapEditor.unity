@@ -3927,6 +3927,60 @@ MonoBehaviour:
     _texture: {fileID: 2800000, guid: 664a9215b0dd8e14da4fabe80d3c85c3, type: 3}
     _fallbackColor: {r: 1, g: 1, b: 1, a: 1}
     _textureTiling: 20
+  - _name: Gm_material_263
+    _textureAvatar: {fileID: 21300000, guid: 31a07ad0c8b68f447b128b2e613e5054, type: 3}
+    _material: {fileID: 2100000, guid: 7a69de37c5849e94ab68a05c8a4ab87d, type: 2}
+    _texture: {fileID: 2800000, guid: 41846b623e197794dae60eee829c54df, type: 3}
+    _fallbackColor: {r: 1, g: 1, b: 1, a: 1}
+    _textureTiling: 20
+  - _name: Gm_material_255
+    _textureAvatar: {fileID: 21300000, guid: fb6fbf5b9bf75d64c968189304ce35eb, type: 3}
+    _material: {fileID: 2100000, guid: 27e805ba75482f24490ddf7fd6f1944f, type: 2}
+    _texture: {fileID: 2800000, guid: c61057690945fee4a9b06faad8368eda, type: 3}
+    _fallbackColor: {r: 1, g: 1, b: 1, a: 1}
+    _textureTiling: 20
+  - _name: Gm_material_191
+    _textureAvatar: {fileID: 21300000, guid: 8fa518edf412b1b45bb82b7975597ce9, type: 3}
+    _material: {fileID: 2100000, guid: 27e805ba75482f24490ddf7fd6f1944f, type: 2}
+    _texture: {fileID: 2800000, guid: 95d6af6f242cd4542855b855453e8ba6, type: 3}
+    _fallbackColor: {r: 1, g: 1, b: 1, a: 1}
+    _textureTiling: 20
+  - _name: Gm_material_151
+    _textureAvatar: {fileID: 21300000, guid: a2e91cb00654b744386e9b83631510b7, type: 3}
+    _material: {fileID: 2100000, guid: b2dd3f509a6e3094e95ba41231344680, type: 2}
+    _texture: {fileID: 2800000, guid: b261a0a1b1771ab4a8c9b17f83548a73, type: 3}
+    _fallbackColor: {r: 1, g: 1, b: 1, a: 1}
+    _textureTiling: 20
+  - _name: Gm_material_157
+    _textureAvatar: {fileID: 21300000, guid: c18a94bcaef681946b71e947108d960b, type: 3}
+    _material: {fileID: 2100000, guid: 48e4c043fecf332479dc849d5973c408, type: 2}
+    _texture: {fileID: 2800000, guid: d4888d267735086419eb0599b1dc07ec, type: 3}
+    _fallbackColor: {r: 1, g: 1, b: 1, a: 1}
+    _textureTiling: 20
+  - _name: Gm_material_11
+    _textureAvatar: {fileID: 21300000, guid: 33f982fe3bd08b8459480f5ef59c93cb, type: 3}
+    _material: {fileID: 2100000, guid: 0015efdc912684d469b15b963f6f24d4, type: 2}
+    _texture: {fileID: 2800000, guid: de163d17a38dd42438fce290c9399df5, type: 3}
+    _fallbackColor: {r: 1, g: 1, b: 1, a: 1}
+    _textureTiling: 20
+  - _name: Gm_material_49
+    _textureAvatar: {fileID: 21300000, guid: fbdd07889a48e7c459c1fed02991e765, type: 3}
+    _material: {fileID: 2100000, guid: 919fe343d8fe0d343b1089686b869b61, type: 2}
+    _texture: {fileID: 2800000, guid: c437016597b06b9449de826d2ccf910d, type: 3}
+    _fallbackColor: {r: 1, g: 1, b: 1, a: 1}
+    _textureTiling: 20
+  - _name: Gm_material_65
+    _textureAvatar: {fileID: 21300000, guid: 37b01c4c45acf9444915b37651404624, type: 3}
+    _material: {fileID: 2100000, guid: 89fda2879dfa55c4bb81f9a1de2b2cee, type: 2}
+    _texture: {fileID: 2800000, guid: ba528a8066fdcbe499ab682d0b2f9c70, type: 3}
+    _fallbackColor: {r: 1, g: 1, b: 1, a: 1}
+    _textureTiling: 20
+  - _name: Gm_material_72
+    _textureAvatar: {fileID: 21300000, guid: 8701292da49e1e544b2a6a30ae66b005, type: 3}
+    _material: {fileID: 2100000, guid: cb3ef5352537c42448fd1b0b3bcf0d43, type: 2}
+    _texture: {fileID: 2800000, guid: b28787d9477600e4fb972878d5cdbe72, type: 3}
+    _fallbackColor: {r: 1, g: 1, b: 1, a: 1}
+    _textureTiling: 20
   _selectedMaterialIndex: 0
   _textureResolution: 1024
   _brushOpacity: 1
@@ -4152,7 +4206,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1500719164
 RectTransform:
   m_ObjectHideFlags: 0

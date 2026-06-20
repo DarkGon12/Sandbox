@@ -5678,7 +5678,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 202544445bdf09a46b6b3f975e0d23df, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::Sanbox.Weapon.GravityGunMobile
   _firePoint: {fileID: 2062091639114502569}
   _lineRenderer: {fileID: 7346404966352525174}
@@ -113900,6 +113900,7 @@ MonoBehaviour:
   - {fileID: 1554556190568491970}
   - {fileID: 2160258063661293824}
   - {fileID: 7431150801383940570}
+  - {fileID: 4739151702176324041}
   _lastWeaponButton: {fileID: 0}
   _held: 10
 --- !u!1 &7946435839978773829
@@ -152337,13 +152338,49 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0625d50a45478b94f9dc883720668ebe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3812449152192182795}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0625d50a45478b94f9dc883720668ebe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2830491729715864721}
   m_SourcePrefab: {fileID: 100100000, guid: 0625d50a45478b94f9dc883720668ebe, type: 3}
+--- !u!1 &4739151702176324041 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0625d50a45478b94f9dc883720668ebe, type: 3}
+  m_PrefabInstance: {fileID: 2710502746512523680}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2456461389374744139 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0625d50a45478b94f9dc883720668ebe, type: 3}
   m_PrefabInstance: {fileID: 2710502746512523680}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2830491729715864721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4739151702176324041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10fe5f2ac10005748aa668e09085959b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::GoldenFreezeBluster
+  _fireButton: {fileID: 0}
+  _automaticFire: 0
+  _firePoint: {fileID: 3812449152192182795}
+  _camera: {fileID: 0}
+  _range: 60
+  _hitMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  _fireCooldown: 0.35
+  _goldTexture: {fileID: 2800000, guid: 30d13db2079dff947b9e7677de5646d9, type: 3}
+  _statueLifeTime: 30
+  _settleTimeout: 4
+  _settledSpeed: 0.08
+  _impactForce: 4
+  _laserLine: {fileID: 804116464982635973}
+  _laserVisibleTime: 0.08
 --- !u!1001 &7148489850502089522
 PrefabInstance:
   m_ObjectHideFlags: 0

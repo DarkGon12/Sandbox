@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b8c650776871164387b16b274427794, type: 3}
+  m_Name: CreatureSearchCoverState
+  m_EditorClassIdentifier: Assembly-CSharp::Creatures.Navigation.States.CreatureSearchCoverState
+  StateView: {fileID: 0}
+  _settings: {fileID: 11400000, guid: 745eb92b6904bf043a38384449799913, type: 2}
+  _coverAttackState: {fileID: 11400000, guid: 4d8e686fcdfa9f94bb06ff9beab8e3ea, type: 2}
+  _openAttackState: {fileID: 11400000, guid: 4b7f3f0f9dd36ad4f9e61a396dd150ac, type: 2}
